@@ -1,5 +1,11 @@
 # Gra: Podział na pół
 
+## Wymagane biblioteki
+1. math
+2. matplotlib
+3. easyAI
+4. tabulate
+
 ## Zasady:
 1. Gra zaczyna się od ustalonej liczby (np. 1000)
 2. Gracze na zmianę dzielą aktualną liczbę przez **2**, **3** lub **4** (Wynik dzielenia jest zawsze zaokrąglany w dół)
@@ -15,3 +21,4 @@
 
 ## Screenshot z gry
 ![Screenshot of the game](Screenshots/Gameplay.png)
+![Screenshot of the game](Screenshots/Result.png)

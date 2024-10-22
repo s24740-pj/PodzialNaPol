@@ -1,5 +1,7 @@
 import math
+import matplotlib.pyplot as plt
 from easyAI import TwoPlayerGame, Human_Player, AI_Player, Negamax
+from tabulate import tabulate
 
 class DivideByHalf(TwoPlayerGame):
     """
@@ -10,12 +12,25 @@ class DivideByHalf(TwoPlayerGame):
     Dawid Feister
 
     Zasady:
-    1. Gra zaczyna się od ustalonej liczby (np. 1000)
-    2. Gracze na zmianę dzielą aktualną liczbę przez 2, 3 lub 4 (Wynik dzielenia jest zawsze zaokrąglany w dół)
-    3. Gracz, który nie może wykonać poprawnego podziału, gdy liczba wynosi 1, przegrywa grę
-    4. Jeśli gracz wybierze dzielnik, który spowodowałby wynik równy zero, przegrywa
-    5. Gra trwa, dopóki jeden z graczy nie zmusi przeciwnika do sytuacji, w której nie można wykonać ruchu
+    plik README
     """
+
+    def show_welcome_message(self):
+        """
+        Description:
+            Wyświetla wprowadzenie do gry i jej zasady.
+        """
+        print('\n\t\t\tZapraszamy do gry "PODZIAŁ NA PÓŁ", w której zmierzysz się z AI jako swoim przeciwnikiem')
+        print('*' * 130)
+        print('Zasady:')
+        print('1. Gra zaczyna się od ustalonej liczby (np. 1000)')
+        print('2. Gracze na zmianę dzielą aktualną liczbę przez **2**, **3** lub **4** (Wynik dzielenia jest zawsze zaokrąglany w dół)')
+        print('3. Gracz, który nie może wykonać poprawnego podziału, gdy liczba wynosi **1**, przegrywa grę')
+        print('4. Jeśli gracz wybierze dzielnik, który spowodowałby wynik równy **zero**, przegrywa')
+        print('5. Gra trwa, dopóki jeden z graczy nie zmusi przeciwnika do sytuacji, w której nie można wykonać ruchu')
+        print('*' * 130)
+        print('\n')
+
     def __init__(self, players=None):
         """
         Description:
@@ -38,6 +53,7 @@ class DivideByHalf(TwoPlayerGame):
             possible_moves (list): ['2', '3', '4']
         """
         return ['2', '3', '4']
+
     def make_move(self, move):
         """
         Description:
@@ -51,6 +67,7 @@ class DivideByHalf(TwoPlayerGame):
         """
         self.points = math.floor(self.points / int(move))
         return self.points
+
     def win(self):
         """
         Description:
@@ -60,6 +77,7 @@ class DivideByHalf(TwoPlayerGame):
             bool: True lub False w zależności od if self.points == 1.
         """
         return self.points == 1
+
     def is_over(self):
         """
         Description:
@@ -69,12 +87,14 @@ class DivideByHalf(TwoPlayerGame):
             bool: True lub False w zależności od self.win().
         """
         return self.win()
+
     def show(self):
         """
         Description:
             Pokazuje aktualny stan gry, wyświetlając bieżącą punktacje self.points.
         """
         print("Wynik: %d \n" % self.points)
+
     def scoring(self):
         """
         Description:
@@ -86,9 +106,64 @@ class DivideByHalf(TwoPlayerGame):
             -self.points (int): Ujemna punktacja w postaci oceny bliskości wygranej dla AI.
         """
         return -self.points
+
+    def show_history_table(self, history):
+        """
+        Description:
+            Wyświetla historię gry w formie tabeli z wykorzystaniem tabulate.
+
+        Parametry:
+            history (list): Historia ruchów w grze w formacie [(gracz, wybór, wynik przed, wynik po)]
+        """
+        table_data = []
+        for move in history:
+            gracz = "Gracz 1" if move[0] == 1 else "Gracz AI"
+            wybor = move[1]
+            wynik_przed = move[2]
+            wynik_po = move[3]
+            table_data.append([gracz, wybor, wynik_przed, wynik_po])
+
+        headers = ["Gracz", "Wybór gracza", "Wynik do podzielenia", "Wynik po podziale"]
+
+        print(tabulate(table_data, headers, tablefmt="grid"))
+
+    def plot_game_history(self, history):
+        """
+        Description:
+            Rysuje histogram przedstawiający historię gry.
+
+        Parameters:
+            history (list): Historia ruchów w grze w formacie [(gracz, wybór, wynik przed, wynik po)]
+        """
+        rounds = list(range(len(history) + 1))
+        scores = [1000]
+
+        for move in history:
+            scores.append(move[3])
+
+        plt.figure(figsize=(12, 6))
+
+        for i in range(len(history)):
+            plt.plot([i, i + 1], [scores[i], scores[i + 1]], color='red' if history[i][0] == 1 else 'green')
+
+        for i in range(len(history)):
+            plt.fill_between([i, i + 1], [scores[i], scores[i + 1]], color='red' if history[i][0] == 1 else 'green', alpha=0.3)
+
+        plt.xlabel('Runda')
+        plt.ylabel('Wynik')
+        plt.title('Historia gry')
+        plt.xticks(rounds)
+        plt.yticks(range(0, 1100, 100))
+        plt.axhline(1, color='black', linewidth=0.8, linestyle='--')
+        plt.grid()
+        plt.legend(['Gracz 1', 'Gracz AI'], loc='upper right')
+        plt.show()
+
     def play(self):
         """
         Description:
+            Informacja o nazwie gry oraz zasady.
+
             Głowna pętla gry. Wykonuje działania dopóki gra nie jest skończona "while not self.is_over()" takie jak:
                 * pokazuje aktualny stan gry
                     self.show()
@@ -140,9 +215,16 @@ class DivideByHalf(TwoPlayerGame):
                             print("Wynik 1, AI wygralo!")
                         else:
                             print("Wynik 1, Gratulacje udalo Ci sie pokonac AI!")
+
+                * Wyświetla w formie tabelarycznej informację o przebiegu gry
+                    self.show_history_table(history)
+
+                * Wyświetla w formie wykresu historię przebiegu gry
+                    self.plot_game_history(history)
         Returns:
             history (list): Historia wykonanych ruchów przez całą grę
         """
+        self.show_welcome_message()
         history = []
         while not self.is_over():
             self.show()
@@ -156,7 +238,7 @@ class DivideByHalf(TwoPlayerGame):
                     if move not in possible_moves:
                         print("Błąd: %s nie jest poprawnym dzielnikiem." % move)
                         print("Możliwe dzielniki: %s" % possible_moves)
-                print("Gracz wybiera: %s \n" % move)
+                print("Gracz 1 wybiera: %s \n" % move)
             else:
                 move = self.get_move()
                 print("AI wybiera: %s \n" % move)
@@ -169,6 +251,8 @@ class DivideByHalf(TwoPlayerGame):
                 else:
                     print("Wynik 1, Gratulacje udalo Ci sie pokonac AI!")
 
+        self.show_history_table(history)
+        self.plot_game_history(history)
         return history
 """
     ai = Negamax(depth)
@@ -204,4 +288,4 @@ game = DivideByHalf([Human_Player(), AI_Player(ai)])
                 Gracz | Ruch/Dzielnik | Wynik przed dzieleniem | Wynik po dzieleniu
 """
 history = game.play()
-print(history)
+#print(history)
