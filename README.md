@@ -20,5 +20,9 @@
 - Gra trwa, aż jeden z graczy nie będzie w stanie wykonać ruchu.
 
 ## Screenshot z gry
+### Gamplay
 ![Screenshot of the game](Screenshots/Gameplay.png)
-![Screenshot of the game](Screenshots/Result.png)
+### Historia gry
+![Screenshot of the game](Screenshots/HistoryOutput.png)
+### Wykres historii gry
+![Screenshot of the game](Screenshots/HistoryGraph.png)

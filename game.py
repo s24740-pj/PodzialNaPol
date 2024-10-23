@@ -12,24 +12,12 @@ class DivideByHalf(TwoPlayerGame):
     Dawid Feister
 
     Zasady:
-    plik README
+    1. Gra zaczyna się od ustalonej liczby (np. 1000)
+    2. Gracze na zmianę dzielą aktualną liczbę przez 2, 3 lub 4 (Wynik dzielenia jest zawsze zaokrąglany w dół)
+    3. Gracz, który nie może wykonać poprawnego podziału, gdy liczba wynosi 1, przegrywa grę
+    4. Jeśli gracz wybierze dzielnik, który spowodowałby wynik równy zero, przegrywa
+    5. Gra trwa, dopóki jeden z graczy nie zmusi przeciwnika do sytuacji, w której nie można wykonać ruchu
     """
-
-    def show_welcome_message(self):
-        """
-        Description:
-            Wyświetla wprowadzenie do gry i jej zasady.
-        """
-        print('\n\t\t\tZapraszamy do gry "PODZIAŁ NA PÓŁ", w której zmierzysz się z AI jako swoim przeciwnikiem')
-        print('*' * 130)
-        print('Zasady:')
-        print('1. Gra zaczyna się od ustalonej liczby (np. 1000)')
-        print('2. Gracze na zmianę dzielą aktualną liczbę przez **2**, **3** lub **4** (Wynik dzielenia jest zawsze zaokrąglany w dół)')
-        print('3. Gracz, który nie może wykonać poprawnego podziału, gdy liczba wynosi **1**, przegrywa grę')
-        print('4. Jeśli gracz wybierze dzielnik, który spowodowałby wynik równy **zero**, przegrywa')
-        print('5. Gra trwa, dopóki jeden z graczy nie zmusi przeciwnika do sytuacji, w której nie można wykonać ruchu')
-        print('*' * 130)
-        print('\n')
 
     def __init__(self, players=None):
         """
@@ -41,8 +29,24 @@ class DivideByHalf(TwoPlayerGame):
             players (list): Lista graczy. Default: None.
         """
         self.players = players
-        self.points = 1000
+        self.start_points = 1000
+        self.points = self.start_points
         self.current_player = 1
+
+    def show_welcome_message(self):
+        """
+        Description:
+            Wyświetla wprowadzenie do gry i jej zasady.
+        """
+        print('\n\t\t\tZapraszamy do gry "PODZIAŁ NA PÓŁ", w której zmierzysz się z AI jako swoim przeciwnikiem\n'
+              f'{'*' * 130}\n'
+              'Zasady:\n'
+              f'1. Gra zaczyna się od ustalonej liczby (np. {self.start_points})\n'
+              '2. Gracze na zmianę dzielą aktualną liczbę przez 2, 3 lub 4 (Wynik dzielenia jest zawsze zaokrąglany w dół)\n'
+              '3. Gracz, który nie może wykonać poprawnego podziału, gdy liczba wynosi 1, przegrywa grę\n'
+              '4. Jeśli gracz wybierze dzielnik, który spowodowałby wynik równy 0, przegrywa\n'
+              '5. Gra trwa, dopóki jeden z graczy nie zmusi przeciwnika do sytuacji, w której nie można wykonać ruchu\n'
+              f'{'*' * 130}\n')
 
     def possible_moves(self):
         """
@@ -50,7 +54,7 @@ class DivideByHalf(TwoPlayerGame):
             Zwraca statyczną listę możliwych ruchów do wykonania. Zawiera ona dzielniki potrzebne do gry.
 
         Returns:
-            possible_moves (list): ['2', '3', '4']
+            possible_moves (list): Lista możliwych dzielników do wyboru.
         """
         return ['2', '3', '4']
 
@@ -136,7 +140,7 @@ class DivideByHalf(TwoPlayerGame):
             history (list): Historia ruchów w grze w formacie [(gracz, wybór, wynik przed, wynik po)]
         """
         rounds = list(range(len(history) + 1))
-        scores = [1000]
+        scores = [self.start_points]
 
         for move in history:
             scores.append(move[3])
@@ -153,7 +157,13 @@ class DivideByHalf(TwoPlayerGame):
         plt.ylabel('Wynik')
         plt.title('Historia gry')
         plt.xticks(rounds)
-        plt.yticks(range(0, 1100, 100))
+
+        plt.yscale('log')
+        ytick_values = [record[2] for record in history]
+        divisors = [record[1] for record in history]
+        ytick_labels = [f"{val} ({div})" for val, div in zip(ytick_values, divisors)]
+        plt.yticks(ytick_values, labels=ytick_labels)
+
         plt.axhline(1, color='black', linewidth=0.8, linestyle='--')
         plt.grid()
         plt.legend(['Gracz 1', 'Gracz AI'], loc='upper right')
@@ -288,4 +298,4 @@ game = DivideByHalf([Human_Player(), AI_Player(ai)])
                 Gracz | Ruch/Dzielnik | Wynik przed dzieleniem | Wynik po dzieleniu
 """
 history = game.play()
-#print(history)
+print(history)
