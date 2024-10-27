@@ -11,6 +11,12 @@ class DivideByHalf(TwoPlayerGame):
     Kamil Powierza
     Dawid Feister
 
+    Wymagane biblioteki:
+    1. math
+    2. matplotlib
+    3. easyAI
+    4. tabulate
+
     Zasady:
     1. Gra zaczyna się od ustalonej liczby (np. 1000)
     2. Gracze na zmianę dzielą aktualną liczbę przez 2, 3 lub 4 (Wynik dzielenia jest zawsze zaokrąglany w dół)
