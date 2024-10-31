@@ -23,8 +23,8 @@
 
 ## Screenshot z gry
 ### Gamplay
-![Screenshot of the game](Zjazd1/Screenshots/Gameplay.png)
+![Screenshot of the game](Zjazd1_PodzialNaPol/Screenshots/Gameplay.png)
 ### Historia gry
-![Screenshot of the game](Zjazd1/Screenshots/HistoryOutput.png)
+![Screenshot of the game](Zjazd1_PodzialNaPol/Screenshots/HistoryOutput.png)
 ### Wykres historii gry
-![Screenshot of the game](Zjazd1/Screenshots/HistoryGraph.png)
+![Screenshot of the game](Zjazd1_PodzialNaPol/Screenshots/HistoryGraph.png)
