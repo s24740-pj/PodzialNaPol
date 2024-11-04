@@ -1,4 +1,3 @@
-
 # Zjazd 1
 ## Gra: Podział na pół
 
@@ -28,3 +27,33 @@
 ![Screenshot of the game](Zjazd1_PodzialNaPol/Screenshots/HistoryOutput.png)
 ### Wykres historii gry
 ![Screenshot of the game](Zjazd1_PodzialNaPol/Screenshots/HistoryGraph.png)
+
+
+# Zjazd 2
+## FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)
+
+### Wymagane biblioteki
+1. numpy
+2. skfuzzy as fuzz
+3. skfuzzy import control as ctrl
+4. networkx
+5. matplotlib.pyplot
+6. pygame
+7. sys
+
+### Problem:
+- Ocena ryzyka jazdy na podstawie widoczności, intensywności opadów i natężenia ruchu.
+- Animacja przejazdu samochodu na podstawie oceny ryzyka jazdy.
+
+## Screenshoty z FuzzyLogic
+### Przykłady wystąpień ryzyka
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/ryzyko1.png)
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/ryzyko2.png)
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/ryzyko3.png)
+### Przykłady wywołania systemu - zrzut ekranu
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/przykladowe_wywolanie1.png)
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/przykladowe_wywolanie2.png)
+![Screenshot of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Screenshots/przykladowe_wywolanie3.png)
+
+## Nagranie animacji
+![Video of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Video/animacja_ryzyka_trzy_warianty.mp4)
