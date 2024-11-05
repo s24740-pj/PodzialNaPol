@@ -1,4 +1,4 @@
-#Projekty
+##Projekty
 
 ## Table of Contents
 - [Gra: Podział na pół](#gra-podzial-na-pol)
