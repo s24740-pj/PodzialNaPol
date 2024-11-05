@@ -1,6 +1,6 @@
 ## Table of Contents
 - [Gra: Podział na pół](#gra:-podział-na-pół)
-- [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzyLogic:-ocena-ryzyka-jazdy-+-animacja-(zastosowanie-w-praktyce))
+- [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic:-ocena-ryzyka-jazdy-+-animacja-(zastosowanie-w-praktyce))
 
 ---
 
