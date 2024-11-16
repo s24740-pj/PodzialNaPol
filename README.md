@@ -1,7 +1,7 @@
 ## Table of Contents
 - [Gra: Podział na pół](#gra-podzial-na-pol)
 - [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
-- [Clustering: Rekomendacja filmów](#clustering-rekomendacja-filmow)
+- [Clustering: Rekomendacja filmow](#clustering-rekomendacja-filmow)
 
 ---
 
@@ -72,7 +72,7 @@
 
 ---
 
-## Clustering: Rekomendacja filmów
+## Clustering: Rekomendacja filmow
 ## Zjazd 3
 
 **Folder:** `Zjazd3_Rekomendacja_filmów`
