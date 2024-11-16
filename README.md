@@ -1,11 +1,11 @@
 ## Table of Contents
-- [Gra: Podział na pół](#gra-podzial-na-pol)
+- [Gra: Podzial na pol](#gra-podzial-na-pol)
 - [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
 - [Clustering: Rekomendacja filmow](#clustering-rekomendacja-filmow)
 
 ---
 
-## Gra: Podział na pół
+## Gra: Podzial na pol
 ## Zjazd 1
 
 **Folder:** `Zjazd1_PodzialNaPol`
