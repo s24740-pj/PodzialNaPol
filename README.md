@@ -1,7 +1,7 @@
-
 ## Table of Contents
 - [Gra: Podział na pół](#gra-podzial-na-pol)
 - [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
+- [Clustering: Rekomendacja filmów](#clustering-rekomendacja-filmow)
 
 ---
 
@@ -69,3 +69,30 @@
 
 ## Nagranie animacji
 ![Video of fuzzyLogic](Zjazd2_WarunkiJazdy_FuzzyLogic/Video/animacja_ryzyka_trzy_warianty.mp4)
+
+---
+
+## Clustering: Rekomendacja filmów
+## Zjazd 3
+
+**Folder:** `Zjazd3_Rekomendacja_filmów`
+
+### Wymagane biblioteki
+1. numpy
+2. argparse
+3. json
+4. sklearn
+5. scipy
+
+### Problem:
+System rekomendacji i antyrekomendacji filmów z wykorzystaniem klasteryzacji i metod podobieństw.
+
+Moduł zawiera implementację systemu rekomendacji filmowych, który grupuje użytkowników na podstawie wspólnych filmów
+i kategorii, a następnie generuje rekomendacje i antyrekomendacje dla wybranego użytkownika. System uwzględnia różne
+metody obliczania podobieństwa między użytkownikami, takie jak odległość Euklidesowa i korelacja Pearsona, oraz
+wykorzystuje algorytm k-średnich (k-means) do grupowania użytkowników.
+
+## Screenshoty z rekomendacji
+![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja1.png)
+![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja2.png)
+![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja3.png)

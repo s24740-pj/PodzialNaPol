@@ -1,0 +1,1556 @@
+{
+    "Paweł Czapiewski": {
+        "1670": {
+            "rating": 9,
+            "categories": ["dramat", "komedia"]
+        },
+        "jak sprzedawać dragi w sieci (szybko)": {
+            "rating": 8,
+            "categories": ["komedia", "kryminał"]
+        },
+        "samce alfa": {
+            "rating": 9,
+            "categories": ["dramat", "komedia"]
+        },
+        "lucyfer": {
+            "rating": 3,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "niebieskoki samuraj": {
+            "rating": 9,
+            "categories": ["dramat", "przygodowy"]
+        },
+        "barbarzyńcy": {
+            "rating": 9,
+            "categories": ["historyczny", "dramat"]
+        },
+        "para idealna": {
+            "rating": 7,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "rojst": {
+            "rating": 8,
+            "categories": ["kryminał", "dramat"]
+        },
+        "polowanie na czerwony październik": {
+            "rating": 10,
+            "categories": ["akcji", "wojenny"]
+        },
+        "siedem": {
+            "rating": 10,
+            "categories": ["thriller", "kryminał"]
+        },
+        "the big bang theory": {
+            "rating": 8,
+            "categories": ["komedia"]
+        },
+        "braveheart": {
+            "rating": 10,
+            "categories": ["historyczny", "dramat"]
+        },
+        "the expanse": {
+            "rating": 7,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "miasteczko south park": {
+            "rating": 9,
+            "categories": ["komedia", "animacja"]
+        },
+        "kraina lodu": {
+            "rating": 5,
+            "categories": ["animacja", "przygodowy"]
+        },
+        "dziennik bridget jones": {
+            "rating": 6,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "kapitan ameryka: wojna bohaterów": {
+            "rating": 3,
+            "categories": ["akcji", "superbohaterowie"]
+        },
+        "avengers: czas ultrona": {
+            "rating": 2,
+            "categories": ["akcji", "superbohaterowie"]
+        },
+        "terminator 2": {
+            "rating": 9,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "planeta singli": {
+            "rating": 7,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "listy do m.": {
+            "rating": 7,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "listy do m. 2": {
+            "rating": 2,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "forrest gump": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "ex machina": {
+            "rating": 10,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "gran torino": {
+            "rating": 9,
+            "categories": ["dramat", "kryminał"]
+        },
+        "cicha noc": {
+            "rating": 1,
+            "categories": ["dramat"]
+        },
+        "battleship: bitwa o ziemię": {
+            "rating": 1,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "narodziny gwiazdy": {
+            "rating": 2,
+            "categories": ["dramat", "muzyczny"]
+        },
+        "kapitan phillips": {
+            "rating": 9,
+            "categories": ["dramat", "thriller"]
+        },
+        "grand budapest hotel": {
+            "rating": 9,
+            "categories": ["komedia", "dramat"]
+        },
+        "wyjazd integracyjny": {
+            "rating": 1,
+            "categories": ["komedia"]
+        },
+        "john wick": {
+            "rating": 7,
+            "categories": ["akcji", "kryminał"]
+        },
+        "narcos": {
+            "rating": 10,
+            "categories": ["kryminał", "dramat"]
+        },
+        "terminal": {
+            "rating": 8,
+            "categories": ["komedia", "dramat"]
+        },
+        "ona": {
+            "rating": 8,
+            "categories": ["romantyczny", "sci-fi"]
+        },
+        "whiplash": {
+            "rating": 10,
+            "categories": ["dramat", "muzyczny"]
+        },
+        "diabeł ubiera się u prady": {
+            "rating": 9,
+            "categories": ["komedia", "dramat"]
+        },
+        "la casa de papel": {
+            "rating": 8,
+            "categories": ["kryminał", "dramat"]
+        },
+        "peaky blinders": {
+            "rating": 9,
+            "categories": ["kryminał", "dramat"]
+        },
+        "contratiempo": {
+            "rating": 9,
+            "categories": ["thriller", "kryminał"]
+        },
+        "la cara oculta": {
+            "rating": 10,
+            "categories": ["thriller", "mystery"]
+        }
+    },
+    "Dawid Feister": {
+        "spirited away": {
+            "rating": 10,
+            "categories": ["fantastyczny", "animacja"]
+        },
+        "gladiator": {
+            "rating": 8,
+            "categories": ["akcji", "historyczny"]
+        },
+        "władca pierścieni": {
+            "rating": 10,
+            "categories": ["fantastyczny", "przygodowy"]
+        },
+        "made in abyss": {
+            "rating": 10,
+            "categories": ["przygodowy", "fantastyczny"]
+        },
+        "w pogoni za szczęściem": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "ludzka stonoga": {
+            "rating": 1,
+            "categories": ["horror", "komedia"]
+        },
+        "listy do m.": {
+            "rating": 4,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "harry potter": {
+            "rating": 9,
+            "categories": ["fantastyczny", "przygodowy"]
+        },
+        "the big bang theory": {
+            "rating": 8,
+            "categories": ["komedia"]
+        },
+        "planeta singli": {
+            "rating": 1,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "forrest gump": {
+            "rating": 9,
+            "categories": ["dramat"]
+        },
+        "kraina lodu": {
+            "rating": 8,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "braveheart": {
+            "rating": 7,
+            "categories": ["historyczny", "dramat"]
+        },
+        "przyjaciele": {
+            "rating": 8,
+            "categories": ["komedia", "romantyczny"]
+        },
+        "gra o tron": {
+            "rating": 6,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "ojciec chrzestny": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "zielona mila": {
+            "rating": 8,
+            "categories": ["dramat", "fantastyczny"]
+        },
+        "pulp fiction": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "dwunastu gniewnych ludzi": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "joker": {
+            "rating": 9,
+            "categories": ["kryminał", "dramat"]
+        },
+        "incepcja": {
+            "rating": 6,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "gotowe na wszystko": {
+            "rating": 3,
+            "categories": ["komedia"]
+        },
+        "gwiezdne wojny": {
+            "rating": 7,
+            "categories": ["sci-fi", "przygodowy"]
+        },
+        "tylko mnie kochaj": {
+            "rating": 3,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "kac wawa": {
+            "rating": 1,
+            "categories": ["komedia"]
+        }
+    },
+    "Sylwia Juda": {
+        "3096 dni": {
+            "rating": 10,
+            "categories": ["dramat", "biograficzny"]
+        },
+        "czarnobyl": {
+            "rating": 9,
+            "categories": ["dramat", "historyczny"]
+        },
+        "euphoria": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "brooklyn 99": {
+            "rating": 8,
+            "categories": ["komedia", "kryminał"]
+        },
+        "gra o tron": {
+            "rating": 10,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "alice in borderland": {
+            "rating": 10,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "hazbin hotel": {
+            "rating": 9,
+            "categories": ["animacja", "komedia"]
+        },
+        "from": {
+            "rating": 8,
+            "categories": ["mystery", "thriller"]
+        },
+        "black bird": {
+            "rating": 7,
+            "categories": ["kryminał", "thriller"]
+        },
+        "venom": {
+            "rating": 8,
+            "categories": ["akcji", "superbohaterowie"]
+        },
+        "igrzyska śmierci": {
+            "rating": 8,
+            "categories": ["akcji", "przygodowy"]
+        },
+        "kraina lodu": {
+            "rating": 9,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "k-on": {
+            "rating": 4,
+            "categories": ["animacja", "muzyczny"]
+        },
+        "365 dni": {
+            "rating": 2,
+            "categories": ["romantyczny", "dramat"]
+        },
+        "you": {
+            "rating": 2,
+            "categories": ["dramat", "thriller"]
+        },
+        "wyjazd integracyjny": {
+            "rating": 1,
+            "categories": ["komedia"]
+        },
+        "slender man": {
+            "rating": 2,
+            "categories": ["horror", "thriller"]
+        },
+        "split": {
+            "rating": 9,
+            "categories": ["thriller", "dramat"]
+        },
+        "obecność": {
+            "rating": 9,
+            "categories": ["horror", "mystery"]
+        },
+        "hell raiser": {
+            "rating": 8,
+            "categories": ["horror"]
+        },
+        "annabelle": {
+            "rating": 4,
+            "categories": ["horror"]
+        },
+        "american horror story": {
+            "rating": 10,
+            "categories": ["horror", "dramat"]
+        },
+        "piła": {
+            "rating": 10,
+            "categories": ["horror", "thriller"]
+        },
+        "handmaid's tale": {
+            "rating": 8,
+            "categories": ["dramat", "sci-fi"]
+        },
+        "gambit królowej": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "mr. robot": {
+            "rating": 8,
+            "categories": ["dramat", "thriller"]
+        },
+        "fate": {
+            "rating": 2,
+            "categories": ["fantastyczny", "akcji"]
+        },
+        "ratched": {
+            "rating": 7,
+            "categories": ["dramat", "thriller"]
+        },
+        "loki": {
+            "rating": 9,
+            "categories": ["akcji", "fantastyczny"]
+        },
+        "gravity falls": {
+            "rating": 8,
+            "categories": ["animacja", "komedia"]
+        },
+        "breaking bad": {
+            "rating": 10,
+            "categories": ["dramat", "kryminał"]
+        },
+        "orange is new black": {
+            "rating": 3,
+            "categories": ["dramat"]
+        },
+        "black mirror": {
+            "rating": 10,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "bridgertonowie": {
+            "rating": 7,
+            "categories": ["dramat", "romantyczny"]
+        },
+        "blood and water": {
+            "rating": 3,
+            "categories": ["dramat"]
+        },
+        "murder drones": {
+            "rating": 9,
+            "categories": ["animacja", "sci-fi"]
+        },
+        "the digital circus": {
+            "rating": 10,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "sting": {
+            "rating": 7,
+            "categories": ["muzyczny"]
+        },
+        "whiplash": {
+            "rating": 10,
+            "categories": ["dramat", "muzyczny"]
+        },
+        "diabeł ubiera się u prady": {
+            "rating": 9,
+            "categories": ["komedia", "dramat"]
+        },
+        "la casa de papel": {
+            "rating": 3,
+            "categories": ["akcji", "kryminał"]
+        }
+    },
+    "Dominik Hinc": {
+        "gra o tron": {
+            "rating": 9,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "breaking bad": {
+            "rating": 10,
+            "categories": ["dramat", "kryminał"]
+        },
+        "fight club": {
+            "rating": 7,
+            "categories": ["dramat", "thriller"]
+        },
+        "dr. stone": {
+            "rating": 9,
+            "categories": ["animacja", "sci-fi"]
+        },
+        "invincible": {
+            "rating": 5,
+            "categories": ["animacja", "akcji"]
+        },
+        "rick and morty": {
+            "rating": 9,
+            "categories": ["animacja", "komedia"]
+        },
+        "bojack horseman": {
+            "rating": 10,
+            "categories": ["animacja", "dramat"]
+        },
+        "dexter": {
+            "rating": 4,
+            "categories": ["kryminał", "dramat"]
+        },
+        "doctor who": {
+            "rating": 1,
+            "categories": ["sci-fi", "przygodowy"]
+        },
+        "narcos": {
+            "rating": 6,
+            "categories": ["kryminał", "dramat"]
+        },
+        "wikingowie": {
+            "rating": 10,
+            "categories": ["dramat", "historyczny"]
+        },
+        "kraina lodu": {
+            "rating": 8,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "house of cards": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "monster": {
+            "rating": 9,
+            "categories": ["dramat", "kryminał"]
+        },
+        "durarara": {
+            "rating": 8,
+            "categories": ["animacja", "akcji"]
+        },
+        "stranger things": {
+            "rating": 7,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "black mirror": {
+            "rating": 10,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "deadpool": {
+            "rating": 6,
+            "categories": ["akcji", "superbohaterowie"]
+        },
+        "prison break": {
+            "rating": 8,
+            "categories": ["kryminał", "dramat"]
+        },
+        "trzynaście powodów": {
+            "rating": 1,
+            "categories": ["dramat"]
+        },
+        "oppenheimer": {
+            "rating": 8,
+            "categories": ["dramat", "historyczny"]
+        },
+        "władca pierścieni": {
+            "rating": 9,
+            "categories": ["fantastyczny", "przygodowy"]
+        },
+        "made in abyss": {
+            "rating": 10,
+            "categories": ["animacja", "przygodowy"]
+        },
+        "barbie": {
+            "rating": 3,
+            "categories": ["komedia", "familijny"]
+        },
+        "chłopiec i czapla": {
+            "rating": 5,
+            "categories": ["dramat"]
+        },
+        "ruchomy zamek hauru": {
+            "rating": 4,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "dinner in america": {
+            "rating": 9,
+            "categories": ["komedia", "dramat"]
+        },
+        "shutter island": {
+            "rating": 9,
+            "categories": ["thriller", "mystery"]
+        },
+        "spirited away": {
+            "rating": 8,
+            "categories": ["animacja", "fantastyczny"]
+        },
+        "ród smoka": {
+            "rating": 2,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "devilman crybaby": {
+            "rating": 9,
+            "categories": ["animacja", "akcji"]
+        }
+    },
+    "Arkadiusz Kluczek": {
+        "breaking bad": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "harry potter": {
+          "rating": 10,
+          "categories": ["fantastyczny", "przygodowy"]
+        },
+        "siedem": {
+          "rating": 8,
+          "categories": ["kryminał", "thriller"]
+        },
+        "fight club": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "peaky blinders": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "arcane": {
+          "rating": 8,
+          "categories": ["animacja", "akcji"]
+        },
+        "venom": {
+          "rating": 6,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "lucyfer": {
+          "rating": 6,
+          "categories": ["kryminał", "dramat"]
+        },
+        "dexter": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "historia lyle'a i erika mendezów": {
+          "rating": 3,
+          "categories": ["kryminał", "dramat"]
+        },
+        "cobra kai": {
+          "rating": 7,
+          "categories": ["akcji", "dramat"]
+        },
+        "skazani na shawshank": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "prison break": {
+          "rating": 7,
+          "categories": ["kryminał", "dramat"]
+        },
+        "gra o tron": {
+          "rating": 4,
+          "categories": ["fantastyczny", "dramat"]
+        },
+        "split": {
+          "rating": 8,
+          "categories": ["thriller"]
+        },
+        "szybcy i wściekli": {
+          "rating": 7,
+          "categories": ["akcji"]
+        },
+        "deadpool": {
+          "rating": 10,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "czarna lista": {
+          "rating": 6,
+          "categories": ["kryminał", "dramat"]
+        },
+        "forrest gump": {
+          "rating": 9,
+          "categories": ["dramat"]
+        },
+        "nietykalni": {
+          "rating": 8,
+          "categories": ["dramat", "komedia"]
+        },
+        "oppenheimer": {
+          "rating": 10,
+          "categories": ["dramat", "historyczny"]
+        },
+        "diuna": {
+          "rating": 6,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "joker": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "boże ciało": {
+          "rating": 6,
+          "categories": ["dramat"]
+        },
+        "sherlock holmes": {
+          "rating": 7,
+          "categories": ["kryminał", "dramat"]
+        },
+        "w głowie się nie mieści": {
+          "rating": 8,
+          "categories": ["animacja", "familijny"]
+        },
+        "mr. robot": {
+          "rating": 7,
+          "categories": ["dramat", "thriller"]
+        },
+        "the 100": {
+          "rating": 6,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "black mirror": {
+          "rating": 7,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "better call saul": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "dark": {
+          "rating": 7,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "the boys": {
+          "rating": 7,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "gambit królowej": {
+          "rating": 9,
+          "categories": ["dramat", "thriller"]
+        },
+        "la casa de papel": {
+          "rating": 5,
+          "categories": ["kryminał", "dramat"]
+        },
+        "mindhunter": {
+          "rating": 6,
+          "categories": ["kryminał", "thriller"]
+        },
+        "punisher": {
+          "rating": 6,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "the walking dead": {
+          "rating": 4,
+          "categories": ["horror", "dramat"]
+        },
+        "luther": {
+          "rating": 6,
+          "categories": ["kryminał", "dramat"]
+        },
+        "big mouth": {
+          "rating": 3,
+          "categories": ["animacja", "komedia"]
+        },
+        "wielka woda": {
+          "rating": 6,
+          "categories": ["dramat"]
+        },
+        "you": {
+          "rating": 4,
+          "categories": ["dramat", "thriller"]
+        }
+      },
+    "Filip Labuda": {
+        "peaky blinders": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "gra o tron": {
+          "rating": 9,
+          "categories": ["fantastyczny", "dramat"]
+        },
+        "kac vegas": {
+          "rating": 9,
+          "categories": ["komedia"]
+        },
+        "breaking bad": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "batman dark knight": {
+          "rating": 8,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "lot": {
+          "rating": 8,
+          "categories": ["dramat"]
+        },
+        "legenda aanga": {
+          "rating": 9,
+          "categories": ["animacja", "przygodowy"]
+        },
+        "arcane": {
+          "rating": 6,
+          "categories": ["animacja", "akcji"]
+        },
+        "irlandczyk": {
+          "rating": 8,
+          "categories": ["dramat"]
+        },
+        "obecność": {
+          "rating": 7,
+          "categories": ["horror", "thriller"]
+        },
+        "ouija": {
+          "rating": 2,
+          "categories": ["horror"]
+        },
+        "slender man": {
+          "rating": 1,
+          "categories": ["horror"]
+        },
+        "jacob's ladder": {
+          "rating": 1,
+          "categories": ["thriller"]
+        },
+        "the darkness": {
+          "rating": 3,
+          "categories": ["horror"]
+        },
+        "tyler rake": {
+          "rating": 4,
+          "categories": ["akcji"]
+        },
+        "szybko i wściekle": {
+          "rating": 8,
+          "categories": ["akcji"]
+        },
+        "cyberpunk": {
+          "rating": 7,
+          "categories": ["animacja", "akcji"]
+        },
+        "narcos": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "annabelle": {
+          "rating": 4,
+          "categories": ["horror"]
+        },
+        "bad boys": {
+          "rating": 7,
+          "categories": ["akcji", "komedia"]
+        },
+        "la casa de papel": {
+          "rating": 4,
+          "categories": ["kryminał", "dramat"]
+        }
+      },
+    "Tomasz Wasielewski": {
+        "monster": {
+          "rating": 10,
+          "categories": ["dramat", "kryminał"]
+        },
+        "cowboy bebop": {
+          "rating": 7,
+          "categories": ["animacja", "akcji"]
+        },
+        "jak wytresować smoka": {
+          "rating": 9,
+          "categories": ["animacja", "familijny"]
+        },
+        "władca pierścieni": {
+          "rating": 10,
+          "categories": ["fantastyczny", "przygodowy"]
+        },
+        "jak poznałem waszą matkę": {
+          "rating": 9,
+          "categories": ["komedia"]
+        },
+        "arcane": {
+          "rating": 8,
+          "categories": ["animacja", "akcji"]
+        },
+        "iniemamocni": {
+          "rating": 9,
+          "categories": ["animacja", "familijny"]
+        },
+        "napoleon wybuchowiec": {
+          "rating": 10,
+          "categories": ["dramat", "komedia"]
+        },
+        "kingsman": {
+          "rating": 8,
+          "categories": ["akcji", "komedia"]
+        },
+        "naznaczony": {
+          "rating": 9,
+          "categories": ["horror", "dramat"]
+        },
+        "deadpool": {
+          "rating": 9,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "dom zły": {
+          "rating": 8,
+          "categories": ["horror"]
+        },
+        "boso przez świat": {
+          "rating": 3,
+          "categories": ["dramat"]
+        },
+        "podróże kulinarne roberta makłowicza": {
+          "rating": 10,
+          "categories": ["dokumentalny"]
+        },
+        "dan da dan": {
+          "rating": 9,
+          "categories": ["akcji"]
+        },
+        "harry potter": {
+          "rating": 10,
+          "categories": ["fantastyczny", "przygodowy"]
+        },
+        "fullmetal alchemist": {
+          "rating": 10,
+          "categories": ["animacja", "przygodowy"]
+        },
+        "catch me if you can": {
+          "rating": 8,
+          "categories": ["dramat", "komedia"]
+        },
+        "love death and robots": {
+          "rating": 9,
+          "categories": ["animacja", "sci-fi"]
+        }
+    },
+    "Daniel Pszczoła": {
+        "breaking bad": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "interstellar": {
+          "rating": 10,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "the suits": {
+          "rating": 8,
+          "categories": ["dramat"]
+        },
+        "lucyfer": {
+          "rating": 7,
+          "categories": ["kryminał", "dramat"]
+        },
+        "straight outta compton": {
+          "rating": 10,
+          "categories": ["dramat", "muzyczny"]
+        },
+        "borderlands": {
+          "rating": 3,
+          "categories": ["akcji"]
+        },
+        "1670": {
+          "rating": 9,
+          "categories": ["dramat"]
+        },
+        "familijny guy": {
+          "rating": 10,
+          "categories": ["animacja", "komedia"]
+        },
+        "brickleberry": {
+          "rating": 10,
+          "categories": ["animacja", "komedia"]
+        },
+        "ahsoka": {
+          "rating": 7,
+          "categories": ["akcji", "przygodowy"]
+        },
+        "forrest gump": {
+          "rating": 9,
+          "categories": ["dramat"]
+        },
+        "john wick": {
+          "rating": 8,
+          "categories": ["akcji", "kryminał"]
+        },
+        "narcos": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "365 dni": {
+          "rating": 2,
+          "categories": ["dramat", "romantyczny"]
+        }
+    },
+    "Michał Kaczmarek": {
+        "terminator 2": {
+          "rating": 10,
+          "categories": ["akcji", "sci-fi"]
+        },
+        "peaky blinders": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "la casa de papel": {
+          "rating": 9,
+          "categories": ["kryminał", "dramat"]
+        },
+        "ex machina": {
+          "rating": 8,
+          "categories": ["sci-fi", "thriller"]
+        },
+        "john wick": {
+          "rating": 9,
+          "categories": ["akcji", "kryminał"]
+        },
+        "szybcy i wściekli": {
+          "rating": 10,
+          "categories": ["akcji"]
+        },
+        "1670": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "oppenheimer": {
+          "rating": 6,
+          "categories": ["dramat", "historyczny"]
+        },
+        "kac vegas": {
+          "rating": 4,
+          "categories": ["komedia"]
+        },
+        "pitbull": {
+          "rating": 2,
+          "categories": ["kryminał", "dramat"]
+        },
+        "kobiety mafii": {
+          "rating": 1,
+          "categories": ["kryminał", "dramat"]
+        },
+        "365 dni": {
+          "rating": 2,
+          "categories": ["dramat", "romantyczny"]
+        },
+        "listy do m.": {
+          "rating": 3,
+          "categories": ["romantyczny", "komedia"]
+        },
+        "bullet train": {
+          "rating": 4,
+          "categories": ["akcji"]
+        },
+        "igrzyska śmierci": {
+          "rating": 9,
+          "categories": ["akcji", "przygodowy"]
+        },
+        "nietykalni": {
+          "rating": 7,
+          "categories": ["dramat", "komedia"]
+        },
+        "american pie": {
+          "rating": 9,
+          "categories": ["komedia"]
+        },
+        "shrek": {
+          "rating": 10,
+          "categories": ["animacja", "komedia"]
+        },
+        "focus": {
+          "rating": 7,
+          "categories": ["komedia", "dramat"]
+        },
+        "sherlock holmes": {
+          "rating": 8,
+          "categories": ["kryminał", "dramat"]
+        },
+        "trzynaście powodów": {
+          "rating": 2,
+          "categories": ["dramat"]
+        },
+        "piła": {
+          "rating": 4,
+          "categories": ["horror", "thriller"]
+        },
+        "the 100": {
+          "rating": 7,
+          "categories": ["sci-fi", "dramat"]
+        },
+        "the boys": {
+          "rating": 9,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "punisher": {
+          "rating": 8,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "the walking dead": {
+          "rating": 8,
+          "categories": ["horror", "dramat"]
+        },
+        "eternals": {
+          "rating": 1,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "tenet": {
+          "rating": 2,
+          "categories": ["sci-fi", "thriller"]
+        },
+        "liga sprawiedliwości": {
+          "rating": 4,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "nie otwieraj oczu": {
+          "rating": 2,
+          "categories": ["horror", "thriller"]
+        },
+        "londyn w ogniu": {
+          "rating": 8,
+          "categories": ["akcji"]
+        },
+        "mechanik": {
+          "rating": 9,
+          "categories": ["akcji", "thriller"]
+        },
+        "niezniszczalni": {
+          "rating": 8,
+          "categories": ["akcji"]
+        },
+        "loki": {
+          "rating": 3,
+          "categories": ["akcji", "superbohaterowie"]
+        },
+        "węże w samolocie": {
+          "rating": 2,
+          "categories": ["akcji", "thriller"]
+        },
+        "anioły i demony": {
+          "rating": 9,
+          "categories": ["mystery", "thriller"]
+        },
+        "kod leonarda da vinci": {
+          "rating": 9,
+          "categories": ["mystery", "thriller"]
+        }
+    },
+    "Antoni Kania": {
+        "whiplash": {
+          "rating": 10,
+          "categories": ["dramat", "muzyczny"]
+        },
+        "dziennik bridget jones": {
+          "rating": 1,
+          "categories": ["romantyczny", "komedia"]
+        },
+        "samurai champloo": {
+          "rating": 10,
+          "categories": ["animacja", "akcji"]
+        },
+        "spider-man: across the spider-verse": {
+          "rating": 10,
+          "categories": ["animacja", "akcji"]
+        },
+        "pulp fiction": {
+          "rating": 10,
+          "categories": ["kryminał", "dramat"]
+        },
+        "once upon a time... in hollywood": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "kill bill": {
+          "rating": 10,
+          "categories": ["akcji", "kryminał"]
+        },
+        "trainspotting": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "fight club": {
+          "rating": 10,
+          "categories": ["dramat"]
+        },
+        "powrót do przyszłości": {
+          "rating": 8,
+          "categories": ["sci-fi", "przygodowy"]
+        },
+        "wall-e": {
+          "rating": 9,
+          "categories": ["animacja", "przygodowy"]
+        },
+        "oczy szeroko zamknięte": {
+          "rating": 8,
+          "categories": ["dramat", "mystery"]
+        },
+        "grindhouse: death proof": {
+          "rating": 10,
+          "categories": ["akcji", "thriller"]
+        },
+        "nienawistna ósemka": {
+          "rating": 8,
+          "categories": ["kryminał", "dramat"]
+        },
+        "django": {
+          "rating": 10,
+          "categories": ["akcji", "dramat"]
+        },
+        "igrzyska śmierci": {
+          "rating": 6,
+          "categories": ["akcji", "przygodowy"]
+        },
+        "boże ciało": {
+          "rating": 8,
+          "categories": ["dramat"]
+        },
+        "ślepnąc od świateł": {
+          "rating": 8,
+          "categories": ["dramat"]
+        },
+        "hobbit": {
+          "rating": 7,
+          "categories": ["fantastyczny", "przygodowy"]
+        },
+        "władca pierścieni": {
+          "rating": 6,
+          "categories": ["fantastyczny", "przygodowy"]
+        },
+        "cowboy bebop": {
+          "rating": 10,
+          "categories": ["animacja", "akcji"]
+        }
+    },
+    "Paulina Debis": {
+        "anioły i demony": {
+            "rating": 9,
+            "categories": ["dramat"]
+        },
+        "kod leonarda da vinci": {
+            "rating": 8,
+            "categories": ["mystery", "thriller"]
+        },
+        "plotkara": {
+            "rating": 7,
+            "categories": ["komedia", "dramat"]
+        },
+        "1670": {
+            "rating": 9,
+            "categories": ["dramat"]
+        },
+        "igrzyska śmierci": {
+            "rating": 8,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "władca pierścieni": {
+            "rating": 5,
+            "categories": ["fantastyczny", "przygodowy"]
+        },
+        "diuna": {
+            "rating": 6,
+            "categories": ["sci-fi", "przygodowy"]
+        },
+        "listy do m.": {
+            "rating": 2,
+            "categories": ["romantyczny", "komedia"]
+        },
+        "grawitacja": {
+            "rating": 8,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "wredne dziewczyny": {
+            "rating": 8,
+            "categories": ["komedia", "romantyczny"]
+        },
+        "interstellar": {
+            "rating": 8,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "wall-e": {
+            "rating": 10,
+            "categories": ["animacja", "sci-fi"]
+        },
+        "infamia": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "behawiorysta": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "szybcy i wściekli": {
+            "rating": 3,
+            "categories": ["akcji", "kryminał"]
+        },
+        "teściowie": {
+            "rating": 9,
+            "categories": ["komedia"]
+        },
+        "stamtąd": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "selling sunset": {
+            "rating": 8,
+            "categories": ["realityshow", "dramat"]
+        },
+        "dexter": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "ranczo": {
+            "rating": 9,
+            "categories": ["komedia", "dramat"]
+        },
+        "trzynaście powodów": {
+            "rating": 2,
+            "categories": ["dramat", "mystery"]
+        },
+        "żmijowisko": {
+            "rating": 6,
+            "categories": ["kryminał", "dramat"]
+        },
+        "stranger things": {
+            "rating": 7,
+            "categories": ["sci-fi", "horror"]
+        },
+        "zachowaj spokój": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "dark": {
+            "rating": 6,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "the walking dead": {
+            "rating": 4,
+            "categories": ["horror", "dramat"]
+        },
+        "the 100": {
+            "rating": 4,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "wednesday": {
+            "rating": 4,
+            "categories": ["fantastyczny", "mystery"]
+        },
+        "pacyfik": {
+            "rating": 3,
+            "categories": ["wojenny", "dramat"]
+        },
+        "snowpiercer": {
+            "rating": 5,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "jurassic world": {
+            "rating": 3,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "glass onion": {
+            "rating": 7,
+            "categories": ["mystery", "kryminał"]
+        },
+        "pitbull": {
+            "rating": 3,
+            "categories": ["akcji", "kryminał"]
+        },
+        "incepcja": {
+            "rating": 6,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "paradise": {
+            "rating": 7,
+            "categories": ["dramat"]
+        },
+        "trauma": {
+            "rating": 5,
+            "categories": ["dramat"]
+        },
+        "gambit królowej": {
+            "rating": 7,
+            "categories": ["dramat", "sportowy"]
+        },
+        "turbulencje": {
+            "rating": 6,
+            "categories": ["thriller"]
+        },
+        "you": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "bridgertonowie": {
+            "rating": 8,
+            "categories": ["romantyczny", "dramat"]
+        },
+        "młody sheldon": {
+            "rating": 7,
+            "categories": ["komedia"]
+        }
+    },
+    "Krystian Jank": {
+        "gra o tron": {
+            "rating": 9,
+            "categories": ["fantastyczny", "dramat"]
+        },
+        "peaky blinders": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "kac vegas": {
+            "rating": 9,
+            "categories": ["komedia"]
+        },
+        "fight club": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "1670": {
+            "rating": 10,
+            "categories": ["dramat"]
+        },
+        "bojack horseman": {
+            "rating": 6,
+            "categories": ["animacja", "komedia"]
+        },
+        "morbius": {
+            "rating": 2,
+            "categories": ["akcji", "horror"]
+        },
+        "john wick": {
+            "rating": 4,
+            "categories": ["akcji", "kryminał"]
+        },
+        "ex machina": {
+            "rating": 9,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "breaking bad": {
+            "rating": 4,
+            "categories": ["kryminał", "dramat"]
+        },
+        "deadpool": {
+            "rating": 7,
+            "categories": ["akcji", "komedia"]
+        },
+        "whiplash": {
+            "rating": 6,
+            "categories": ["dramat"]
+        },
+        "bullet train": {
+            "rating": 5,
+            "categories": ["akcji", "komedia"]
+        },
+        "knives out": {
+            "rating": 6,
+            "categories": ["mystery", "kryminał"]
+        },
+        "palm springs": {
+            "rating": 9,
+            "categories": ["komedia", "romantyczny"]
+        },
+        "superbad": {
+            "rating": 6,
+            "categories": ["komedia"]
+        },
+        "stranger things": {
+            "rating": 4,
+            "categories": ["sci-fi", "horror"]
+        },
+        "nietykalni": {
+            "rating": 7,
+            "categories": ["komedia"]
+        },
+        "avengers: czas ultrona": {
+            "rating": 8,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "trzynaście powodów": {
+            "rating": 6,
+            "categories": ["dramat", "mystery"]
+        },
+        "blade runner 2049": {
+            "rating": 8,
+            "categories": ["sci-fi", "thriller"]
+        },
+        "prison break": {
+            "rating": 7,
+            "categories": ["kryminał", "dramat"]
+        },
+        "kingsman": {
+            "rating": 4,
+            "categories": ["akcji", "komedia"]
+        },
+        "igrzyska śmierci": {
+            "rating": 8,
+            "categories": ["akcji", "sci-fi"]
+        },
+        "chronicle": {
+            "rating": 7,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "the 100": {
+            "rating": 5,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "batman dark knight": {
+            "rating": 8,
+            "categories": ["akcji", "kryminał"]
+        },
+        "mr. robot": {
+            "rating": 2,
+            "categories": ["dramat", "thriller"]
+        },
+        "loki": {
+            "rating": 7,
+            "categories": ["akcji", "fantastyczny"]
+        },
+        "diuna": {
+            "rating": 10,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "la casa de papel": {
+            "rating": 8,
+            "categories": ["kryminał", "dramat"]
+        },
+        "the boys": {
+            "rating": 10,
+            "categories": ["akcji", "komedia"]
+        },
+        "gambit królowej": {
+            "rating": 7,
+            "categories": ["dramat", "sportowy"]
+        },
+        "oppenheimer": {
+            "rating": 5,
+            "categories": ["dramat", "historyczny"]
+        },
+        "slender man": {
+            "rating": 8,
+            "categories": ["horror", "mystery"]
+        },
+        "jak wytresować smoka": {
+            "rating": 8,
+            "categories": ["animacja", "przygodowy"]
+        },
+        "władca pierścieni": {
+            "rating": 6,
+            "categories": ["fantastyczny", "przygodowy"]
+        },
+        "punisher": {
+            "rating": 5,
+            "categories": ["akcji", "kryminał"]
+        },
+        "manchester by the sea": {
+            "rating": 5,
+            "categories": ["dramat"]
+        },
+        "the unbearable weight of massive talent": {
+            "rating": 1,
+            "categories": ["komedia"]
+        },
+        "you": {
+            "rating": 9,
+            "categories": ["kryminał", "dramat"]
+        }
+    },
+    "Sebastian Kalwasiński": {
+        "idiokracja": {
+            "rating": 10,
+            "categories": ["komedia", "sci-fi"]
+        },
+        "marsjanin": {
+            "rating": 8,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "na skraju jutra": {
+            "rating": 8,
+            "categories": ["sci-fi", "akcji"]
+        },
+        "twórca": {
+            "rating": 8,
+            "categories": ["sci-fi", "dramat"]
+        },
+        "szybcy i wściekli": {
+            "rating": 4,
+            "categories": ["akcji", "kryminał"]
+        },
+        "deadpool": {
+            "rating": 9,
+            "categories": ["akcji", "komedia"]
+        },
+        "kingsman": {
+            "rating": 8,
+            "categories": ["akcji", "komedia"]
+        },
+        "naga broń": {
+            "rating": 9,
+            "categories": ["komedia"]
+        },
+        "listy do m.": {
+            "rating": 3,
+            "categories": ["romantyczny", "komedia"]
+        }
+    }
+}
