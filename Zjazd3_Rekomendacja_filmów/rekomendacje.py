@@ -3,6 +3,7 @@ import numpy as np
 import argparse
 from scipy.stats import pearsonr
 from sklearn.cluster import KMeans
+import requests
 """
 Problem:
 --------
@@ -25,6 +26,7 @@ Funkcje modułu:
         Funkcja zawiera logikę awaryjną:
             - Obniża próg ocen wymaganych dla rekomendacji (np. z 8 do 7) i anty rekomendacji (np. z 3 do 4), jeśli początkowo nie uda się znaleźć wystarczającej liczby wyników.
             - Jeśli w obrębie bieżącego klastra nadal nie ma wystarczających wyników, funkcja przechodzi do kolejnego najbliższego klastra, kontynuując poszukiwania.
+    - get_movie_info(movie_name): Wyszukuje w bazie TMDB <themoviedb.org>, filmu na podstawie nazwy, pełny tytuł, data wydania i skrótowy opis w języku polskim oraz angielskim.
     - main(): Obsługuje wczytywanie danych, konfigurację i uruchamianie systemu rekomendacji z linii poleceń.
 
 Autorzy:
@@ -39,6 +41,7 @@ Wymagane biblioteki:
     - json
     - sklearn
     - scipy
+    - requests
 
 Instrukcja użycia:
 ------------------
@@ -62,12 +65,12 @@ Instrukcja użycia:
 
 Zwraca:
 -------
-    - 5 rekomendacji filmów (filmy ocenione wysoko przez podobnych użytkowników, ale nieoglądane przez wybranego użytkownika).
-    - 5 antyrekomendacji filmów (filmy ocenione nisko przez podobnych użytkowników, ale nieoglądane przez wybranego użytkownika).
+    - 5 rekomendacji filmów (filmy ocenione wysoko przez podobnych użytkowników, ale nieoglądane przez wybranego użytkownika, wraz z jego opisem i datą wydania z TMDB).
+    - 5 antyrekomendacji filmów (filmy ocenione nisko przez podobnych użytkowników, ale nieoglądane przez wybranego użytkownika, wraz z jego opisem i datą wydania z TMDB).
 
 Przykład:
 ---------
-    python rekomendacje.py "Dawid Feiter" films_ratings.json --method euclidean --clusters 3
+    python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --clusters 3
 
 """
 def load_data(filename):
@@ -197,6 +200,27 @@ def generate_recommendations_with_similarity(
 
     return recommendations[:n_recommendations], anti_recommendations[:n_anti_recommendations]
 
+def get_movie_info(movie_name):
+    api_key = "96846220528485dc6a503925cfb9c6eb"
+    url = f"https://api.themoviedb.org/3/search/movie"
+    params = {
+        "api_key": api_key,
+        "query": movie_name,
+        "language": "pl"
+    }
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        if data['results']:
+            movie = data['results'][0]
+            print(f"Tytuł: {movie['title']}")
+            print(f"Data wydania: {movie.get('release_date', 'Brak danych')}")
+            print(f"Opis: {movie.get('overview', 'Brak opisu')}\n")
+        else:
+            print("Nie znaleziono filmu.\n")
+    else:
+        print("Nie udało się połączyć z API.\n")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Rekomendacje filmowe')
@@ -214,11 +238,12 @@ def main():
     print(f"Rekomendacje dla użytkownika {args.username}:")
     for i, movie in enumerate(recommendations, 1):
         print(f"{i}. {movie}")
+        get_movie_info(movie)
 
     print(f"\nAnty rekomendacje dla użytkownika {args.username}:")
     for i, movie in enumerate(anti_recommendations, 1):
         print(f"{i}. {movie}")
-
+        get_movie_info(movie)
 
 if __name__ == "__main__":
     main()

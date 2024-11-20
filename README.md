@@ -92,7 +92,12 @@ i kategorii, a następnie generuje rekomendacje i antyrekomendacje dla wybranego
 metody obliczania podobieństwa między użytkownikami, takie jak odległość Euklidesowa i korelacja Pearsona, oraz
 wykorzystuje algorytm k-średnich (k-means) do grupowania użytkowników.
 
-## Screenshoty z rekomendacji
+## Screenshoty
+### Rekomendacji
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja1.png)
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja2.png)
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/rekomendacja3.png)
+
+### Rekomendacji z opisem i datą wydania (Bonus)
+Wykorzystanie API [TMDB](https://www.themoviedb.org)
+![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/opis_rekomendacji.png)
