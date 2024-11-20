@@ -62,6 +62,7 @@ Instrukcja użycia:
         - `filename`: Plik JSON z danymi.
         - `--method`: Opcjonalnie metoda obliczania podobieństwa ('euclidean' lub 'pearson').
         - `--clusters`: Opcjonalnie liczba klastrów (domyślnie 3).
+        - `--api`: Opcjonalne api key, które jest potrzebne dd wyświetlenia szczegółowych informacji o filmach.
 
 Zwraca:
 -------
