@@ -27,6 +27,7 @@ Funkcje modułu:
             - Obniża próg ocen wymaganych dla rekomendacji (np. z 8 do 7) i anty rekomendacji (np. z 3 do 4), jeśli początkowo nie uda się znaleźć wystarczającej liczby wyników.
             - Jeśli w obrębie bieżącego klastra nadal nie ma wystarczających wyników, funkcja przechodzi do kolejnego najbliższego klastra, kontynuując poszukiwania.
     - get_movie_info(movie_name): Wyszukuje w bazie TMDB <themoviedb.org>, filmu na podstawie nazwy, pełny tytuł, data wydania i skrótowy opis w języku polskim oraz angielskim.
+    - compare_recommendations(username, ratings, user_clusters): Porównuje dwie metryki 'euclidean' oraz 'pearson'. Zwraca rekomendacje, antyrekomendacje oraz wspólne dla każdej metryki.
     - main(): Obsługuje wczytywanie danych, konfigurację i uruchamianie systemu rekomendacji z linii poleceń.
 
 Autorzy:
@@ -63,6 +64,7 @@ Instrukcja użycia:
         - `--method`: Opcjonalnie metoda obliczania podobieństwa ('euclidean' lub 'pearson').
         - `--clusters`: Opcjonalnie liczba klastrów (domyślnie 3).
         - `--api`: Opcjonalne api key, które jest potrzebne dd wyświetlenia szczegółowych informacji o filmach.
+        - `--compare`: Opcjonalnie zostają porównane dwie metryki 'euclidean' oraz 'pearson'. Wyświetlane są rekomendacje, antyrekomendacje oraz wspólne dla dwóch metryk.
 
 Zwraca:
 -------
@@ -72,6 +74,8 @@ Zwraca:
 Przykład:
 ---------
     python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --clusters 3
+    python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --clusters 3 --api <api key>
+    python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean --clusters 3 --compare
 
 """
 def load_data(filename):
@@ -96,7 +100,7 @@ def pearson_similarity(user1, user2, ratings):
     user1_ratings = [ratings[user1][movie]["rating"] for movie in common_movies]
     user2_ratings = [ratings[user2][movie]["rating"] for movie in common_movies]
 
-    if len(set(user1_ratings)) == 1 and len(set(user2_ratings)) == 1:
+    if len(set(user1_ratings)) == 1 or len(set(user2_ratings)) == 1:
         return 0
 
     corr, _ = pearsonr(user1_ratings, user2_ratings)
@@ -222,6 +226,29 @@ def get_movie_info(movie_name, api_key):
         else:
             print("Nie udało się połączyć z API.\n")
 
+def compare_recommendations(username, ratings, user_clusters):
+    similarity_func_euclidean = lambda u1, u2, r: weighted_similarity(u1, u2, r, 'euclidean')
+    similarity_func_pearson = lambda u1, u2, r: weighted_similarity(u1, u2, r, 'pearson')
+
+    recommendations_euclidean, anti_recommendations_euclidean = generate_recommendations_with_similarity(username, ratings, similarity_func_euclidean, user_clusters)
+    recommendations_pearson, anti_recommendations_pearson = generate_recommendations_with_similarity(username, ratings, similarity_func_pearson, user_clusters)
+
+    set_euclidean_recomendations = set(recommendations_euclidean)
+    set_pearson_recomendations = set(recommendations_pearson)
+
+    set_euclidean_anti_recomendations = set(anti_recommendations_euclidean)
+    set_pearson_anti_recomendations = set(anti_recommendations_pearson)
+
+    common_recommendations = set_euclidean_recomendations & set_pearson_recomendations
+    only_euclidean_recomendations = set_euclidean_recomendations
+    only_pearson_recomendations = set_pearson_recomendations
+
+    common_anti_recommendations = set_euclidean_anti_recomendations & set_pearson_anti_recomendations
+    only_euclidean_anti_recomendations = set_euclidean_anti_recomendations
+    only_pearson_anti_recomendations = set_pearson_anti_recomendations
+
+    return list(only_euclidean_recomendations), list(only_pearson_recomendations), list(common_recommendations), list(only_euclidean_anti_recomendations), list(only_pearson_anti_recomendations), list(common_anti_recommendations)
+
 
 def main():
     parser = argparse.ArgumentParser(description='Rekomendacje filmowe')
@@ -230,6 +257,7 @@ def main():
     parser.add_argument('--api', type=str, help='Podaj api do szczegółowych informacji')
     parser.add_argument('--method', type=str, choices=['euclidean', 'pearson'], default='euclidean', help='Metoda obliczania podobieństwa (domyślnie pearson)')
     parser.add_argument('--clusters', type=int, default=3, help='Liczba klastrów (domyślnie 3)')
+    parser.add_argument("--compare", action="store_true", help="Porównaj wyniki dla dwóch metryk (Euklidesowa i Pearson)")
     args = parser.parse_args()
 
     ratings = load_data(args.filename)
@@ -246,6 +274,16 @@ def main():
     for i, movie in enumerate(anti_recommendations, 1):
         print(f"{i}. {movie}")
         get_movie_info(movie, args.api)
+
+    if args.compare:
+        print(f"Porównanie rekomendacji dla użytkownika {args.username}:")
+        compared_recomendations = compare_recommendations(args.username, ratings, user_clusters)
+        print(f"Rekomendacje euclidean: {compared_recomendations[0]}")
+        print(f"Rekomendacje pearson: {compared_recomendations[1]}")
+        print(f"Rekomendacje wspólne: {compared_recomendations[2]}")
+        print(f"Anty rekomendacje euclidean: {compared_recomendations[3]}")
+        print(f"Anty rekomendacje pearson: {compared_recomendations[4]}")
+        print(f"Anty rekomendacje wspólne: {compared_recomendations[5]}")
 
 if __name__ == "__main__":
     main()
