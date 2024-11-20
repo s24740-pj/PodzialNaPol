@@ -100,4 +100,7 @@ wykorzystuje algorytm k-średnich (k-means) do grupowania użytkowników.
 
 ### Rekomendacji z opisem i datą wydania (Bonus)
 Wykorzystanie API [TMDB](https://www.themoviedb.org)
+```terminal
+python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --clusters 3 --api <api>
+```
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/opis_rekomendacji.png)

@@ -200,32 +200,33 @@ def generate_recommendations_with_similarity(
 
     return recommendations[:n_recommendations], anti_recommendations[:n_anti_recommendations]
 
-def get_movie_info(movie_name):
-    api_key = "96846220528485dc6a503925cfb9c6eb"
-    url = f"https://api.themoviedb.org/3/search/movie"
-    params = {
-        "api_key": api_key,
-        "query": movie_name,
-        "language": "pl"
-    }
-    response = requests.get(url, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        if data['results']:
-            movie = data['results'][0]
-            print(f"Tytuł: {movie['title']}")
-            print(f"Data wydania: {movie.get('release_date', 'Brak danych')}")
-            print(f"Opis: {movie.get('overview', 'Brak opisu')}\n")
+def get_movie_info(movie_name, api_key):
+    if api_key is not None:
+        url = f"https://api.themoviedb.org/3/search/movie"
+        params = {
+            "api_key": api_key,
+            "query": movie_name,
+            "language": "pl"
+        }
+        response = requests.get(url, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            if data['results']:
+                movie = data['results'][0]
+                print(f"Tytuł: {movie['title']}")
+                print(f"Data wydania: {movie.get('release_date', 'Brak danych')}")
+                print(f"Opis: {movie.get('overview', 'Brak opisu')}\n")
+            else:
+                print("Nie znaleziono filmu.\n")
         else:
-            print("Nie znaleziono filmu.\n")
-    else:
-        print("Nie udało się połączyć z API.\n")
+            print("Nie udało się połączyć z API.\n")
 
 
 def main():
     parser = argparse.ArgumentParser(description='Rekomendacje filmowe')
     parser.add_argument('username', type=str, help='Nazwa użytkownika, dla którego generujemy rekomendacje')
     parser.add_argument('filename', type=str, help='Plik z danymi w formacie JSON')
+    parser.add_argument('--api', type=str, help='Podaj api do szczegółowych informacji')
     parser.add_argument('--method', type=str, choices=['euclidean', 'pearson'], default='euclidean', help='Metoda obliczania podobieństwa (domyślnie pearson)')
     parser.add_argument('--clusters', type=int, default=3, help='Liczba klastrów (domyślnie 3)')
     args = parser.parse_args()
@@ -238,12 +239,12 @@ def main():
     print(f"Rekomendacje dla użytkownika {args.username}:")
     for i, movie in enumerate(recommendations, 1):
         print(f"{i}. {movie}")
-        get_movie_info(movie)
+        get_movie_info(movie, args.api)
 
     print(f"\nAnty rekomendacje dla użytkownika {args.username}:")
     for i, movie in enumerate(anti_recommendations, 1):
         print(f"{i}. {movie}")
-        get_movie_info(movie)
+        get_movie_info(movie, args.api)
 
 if __name__ == "__main__":
     main()
