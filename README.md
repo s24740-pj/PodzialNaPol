@@ -83,6 +83,7 @@
 3. json
 4. sklearn
 5. scipy
+6. requests
 
 ### Problem:
 System rekomendacji i antyrekomendacji filmów z wykorzystaniem klasteryzacji i metod podobieństw.
