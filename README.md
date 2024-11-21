@@ -106,7 +106,7 @@ python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --c
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/opis_rekomendacji.png)
 
 ### Porównanie rekomendacji dwoma metrykami (Bonus)
-Porównywanie dwóch metryk `uclidean` oraz `pearson`
+Porównywanie dwóch metryk `euclidean` oraz `pearson`
 ```terminal
 python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --clusters 3 --compare
 python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean --clusters 3 --compare
