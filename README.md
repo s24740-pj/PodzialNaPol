@@ -2,6 +2,7 @@
 - [Gra: Podzial na pol](#gra-podzial-na-pol)
 - [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
 - [Clustering: Rekomendacja filmow](#clustering-rekomendacja-filmow)
+- [Klasyfikacja](#klasyfikacja)
 
 ---
 
@@ -112,3 +113,38 @@ python rekomendacje.py "Dawid Feister" films_ratings.json --method euclidean --c
 python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean --clusters 3 --compare
 ```
 ![Screenshot of recommendation](Zjazd3_Rekomendacja_filmów/Screenshots/porownanie_rekomendacji.png)
+
+---
+
+## Klasyfikacja
+## Zjazd 3
+
+**Folder:** `Zjazd4_Klasyfikacja`
+
+### Problem
+Projekt polega na klasyfikacji mieszkań w Bostonie na podstawie cech:
+- `CRIM`: Wskaźnik przestępczości na mieszkańca w danej miejscowości.
+- `ZN`: Procent terenów mieszkalnych przeznaczonych na działki większe niż 25,000 stóp kwadratowych.
+- `INDUS`: Procent gruntów przeznaczonych na przemysł nienależący do sektora detalicznego w danej miejscowości.
+- `CHAS`: Zmienna binarna wskazująca, czy dany obszar graniczy z rzeką Charles (1 = tak, 0 = nie).
+- `NOX`: Stężenie tlenków azotu (w częściach na 10 milionów).
+- `RM`: Średnia liczba pokoi w mieszkaniach w danej miejscowości.
+- `AGE`: Procent jednostek mieszkalnych posiadających właściciela, które zostały wybudowane przed 1940 rokiem.
+- `DIS`: Wazona odległość do pięciu głównych ośrodków zatrudnienia w Bostonie.
+- `RAD`: Indeks dostępności do dróg promieniowych.
+- `TAX`: Stawka podatku od nieruchomości (wartość nieruchomości na $10,000).
+- `PTRATIO`: Stosunek liczby uczniów do nauczycieli w danej miejscowości.
+- `B`: Wzór: 1000 * (Bk - 0.63)^2, gdzie Bk to proporcja ludności czarnoskórej w danej miejscowości.
+- `LSTAT`: Procent ludności o niższym statusie społecznym.
+- `MEDV`: Mediana wartości domów właścicieli w tysiącach dolarów.
+
+[Źródło](https://machinelearningmastery.com/standard-machine-learning-datasets/)
+
+### Drzewo decyzyjne
+Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy: `niską (0)` i `wysoką (1)` cenę. `Drzewo decyzyjne` jest trenowane na przygotowanych danych i wykorzystywane do `przewidywania klasy dla nowych danych`. Skrypt zawiera także `wizualizację drzewa decyzyjnego` oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.
+
+### Screenshoty
+#### Wizualizacja Drzewa Decyzyjnego
+![decision_tree_plot.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot.png)
+#### Dokładność drzewa i przykładowe użycie
+![decision_tree_terminal.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal.png)
