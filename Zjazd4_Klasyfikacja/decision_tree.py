@@ -90,7 +90,6 @@ def split_and_scale_data(X, y):
     """
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Skalowanie danych
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
@@ -167,8 +166,6 @@ def predict_sample_data(clf_tree, scaler, sample_data, feature_names):
 
     return predicted_class
 
-
-# Główna funkcja
 def main():
     """
         Description:
