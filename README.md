@@ -117,7 +117,7 @@ python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean
 ---
 
 ## Klasyfikacja
-## Zjazd 3
+## Zjazd 4
 
 **Folder:** `Zjazd4_Klasyfikacja`
 
