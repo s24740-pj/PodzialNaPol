@@ -2,6 +2,7 @@
 - [Gra: Podzial na pol](#gra-podzial-na-pol)
 - [FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
 - [Clustering: Rekomendacja filmow](#clustering-rekomendacja-filmow)
+- [Klasyfikacja](#klasyfikacja)
 
 ---
 
