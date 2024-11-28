@@ -171,13 +171,13 @@ Poniżej opis parametrów w bazie:
 ### Drzewo decyzyjne
 Na podstawie `mediany` ilości pierścieni dane są `klasyfikowane` na dwie grupy: `Younger (0)` i `Older (1)`, definiując wiek Abalone.\
 `Drzewo decyzyjne` jest trenowane na przygotowanych danych i wykorzystywane do przewidywania klasy dla nowych danych. \
-Skrypt zawiera także `wizualizację` drzewa decyzyjnego oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.\
+Skrypt zawiera także `wizualizację` drzewa decyzyjnego oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.
 
 Płeć w danych są przeliczane w postaci `"M": 0, "F": 1, "I": 2`.
 
 ### Wizualizacja Drzewa Decyzyjnego
 ![decision_tree_abalone_plot.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot_abalone.png)
-### Dokładność drzewa i przykładowe użycie
+### Dokładność Drzewa Decyzyjnego i przykładowe użycie
 Dane mogą być podane w postaci:
 ```terminal
     [['0',0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
