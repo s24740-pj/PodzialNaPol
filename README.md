@@ -145,7 +145,7 @@ Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy:
 
 ### Screenshoty
 #### Wizualizacja Drzewa Decyzyjnego
-![decision_tree_plot_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot_boston_house_pricet.png)
+![decision_tree_plot_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot_boston_house_price.png)
 #### Dokładność drzewa i przykładowe użycie
 ![decision_tree_terminal_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal_boston_house_price.png)
 
