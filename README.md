@@ -121,7 +121,7 @@ python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean
 
 **Folder:** `Zjazd4_Klasyfikacja`
 
-### Problem
+### Problem Boston House Price
 Projekt polega na klasyfikacji mieszkań w Bostonie na podstawie cech:
 - `CRIM`: Wskaźnik przestępczości na mieszkańca w danej miejscowości.
 - `ZN`: Procent terenów mieszkalnych przeznaczonych na działki większe niż 25,000 stóp kwadratowych.
@@ -145,6 +145,17 @@ Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy:
 
 ### Screenshoty
 #### Wizualizacja Drzewa Decyzyjnego
-![decision_tree_plot.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot.png)
+![decision_tree_plot_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot_boston_house_pricet.png)
 #### Dokładność drzewa i przykładowe użycie
-![decision_tree_terminal.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal.png)
+![decision_tree_terminal_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal_boston_house_price.png)
+
+### SVM (SVC)
+Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy: `niską (0)` i `wysoką (1)` cenę. `SVM` jest trenowany na przygotowanych danych i wykorzystywany do `przewidywania klasy dla nowych danych`. Skrypt zawiera także `wizualizację SVC` oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.
+
+### Screenshoty
+#### Wizualizacja SVM
+![SVM_plot_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/SVM_plot_boston_house_price.png)
+#### Dokładność drzewa i przykładowe użycie
+![SVM_terminal__boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/SVM_terminal__boston_house_price.png)
+
+### Problem ......
