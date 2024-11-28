@@ -56,7 +56,7 @@ def load_and_prepare_data(file_path):
         - file_path (str): Ścieżka do pliku z danymi.
 
     Returns:
-        - X (DataFrame): Dane wejściowe (wszystkie cechy oprócz MEDV i PRICE_CLASS).
+        - X (DataFrame): Dane wejściowe (wszystkie cechy oprócz Rings i Rings_Class).
         - y (Series): Kolumna docelowa, czyli Rings_Class, 0 lub 1.
     """
     data = pd.read_csv(file_path, sep=",")
