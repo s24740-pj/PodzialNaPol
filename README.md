@@ -158,4 +158,39 @@ Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy:
 #### Dokładność drzewa i przykładowe użycie
 ![SVM_terminal__boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/SVM_terminal__boston_house_price.png)
 
-### Problem ......
+### Problem przewidywania wieku Abalone
+Projekt polega na `klasyfikacji wieku muszli abalonów` na podstawie różnych `cech fizycznych`, takich jak `wymiary`, `wagi` i `płeć muszli`.\
+Wartość `Rings` reprezentuje `liczbę pierścieni` na muszli, co odpowiada jej wiekowi.\
+Poniżej opis parametrów w bazie:
+- `Sex`: Płeć muszli. Może przyjąć wartości M = 0 (mężczyzna), F = 1 (kobieta) lub I = 2 (niemowlę).
+- `Length`: Długość muszli, mierzona w milimetrach (mm), będąca najdłuższym wymiarem muszli.
+- `Diameter`: Średnica muszli, mierzona w milimetrach (mm), w kierunku prostopadłym do długości.
+- `Height`: Wysokość muszli wraz z mięsem, mierzona w milimetrach (mm).
+- `Whole weight`: Całkowita waga muszli, mierzona w gramach (g), obejmująca muszlę oraz mięso.
+- `Shucked weight`: Waga samego mięsa, mierzona w gramach (g), po oddzieleniu od muszli.
+- `Viscera weight`: Waga wnętrzności muszli, mierzona w gramach (g), po usunięciu wnętrzności.
+- `Shell weight`: Waga muszli, mierzona w gramach (g), po wysuszeniu.
+- `Rings`: Liczba pierścieni na muszli. To cecha, którą chcemy przewidywać.
+
+[Źródło](https://archive.ics.uci.edu/dataset/1/abalone)
+
+### Drzewo decyzyjne
+Na podstawie `mediany` ilości pierścieni dane są `klasyfikowane` na dwie grupy: `Younger (0)` i `Older (1)`, definiując wiek Abalone.\
+`Drzewo decyzyjne` jest trenowane na przygotowanych danych i wykorzystywane do przewidywania klasy dla nowych danych. \
+Skrypt zawiera także `wizualizację` drzewa decyzyjnego oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.\
+
+Płeć w danych są przeliczane w postaci `"M": 0, "F": 1, "I": 2`.
+
+### Screenshoty
+#### Wizualizacja Drzewa Decyzyjnego
+![decision_tree_abalone_plot.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_plot_abalone.png)
+#### Dokładność drzewa i przykładowe użycie
+`PS` Dane mogą być podane w postaci:
+```terminal
+    [['0',0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
+```
+Lub
+```terminal
+    [['m',0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
+```
+![decision_tree_terminal_abalone.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal_abalone.png)

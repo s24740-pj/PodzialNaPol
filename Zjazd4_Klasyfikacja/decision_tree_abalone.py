@@ -1,6 +1,6 @@
 from sklearn import tree
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, accuracy_score
 import pandas as pd
@@ -21,24 +21,22 @@ import matplotlib.pyplot as plt
         7. matplotlib.pyplot
 
     Description:
-        Projekt polega na klasyfikacji mieszkań w Bostonie na podstawie cech:
-            1. CRIM: Wskaźnik przestępczości na mieszkańca w danej miejscowości.
-            2. ZN: Procent terenów mieszkalnych przeznaczonych na działki większe niż 25,000 stóp kwadratowych.
-            3. INDUS: Procent gruntów przeznaczonych na przemysł nienależący do sektora detalicznego w danej miejscowości.
-            4. CHAS: Zmienna binarna wskazująca, czy dany obszar graniczy z rzeką Charles (1 = tak, 0 = nie).
-            5. NOX: Stężenie tlenków azotu (w częściach na 10 milionów).
-            6. RM: Średnia liczba pokoi w mieszkaniach w danej miejscowości.
-            7. AGE: Procent jednostek mieszkalnych posiadających właściciela, które zostały wybudowane przed 1940 rokiem.
-            8. DIS: Wazona odległość do pięciu głównych ośrodków zatrudnienia w Bostonie.
-            9. RAD: Indeks dostępności do dróg promieniowych.
-            10. TAX: Stawka podatku od nieruchomości (wartość nieruchomości na $10,000).
-            11. PTRATIO: Stosunek liczby uczniów do nauczycieli w danej miejscowości.
-            12. B: Wzór: 1000 * (Bk - 0.63)^2, gdzie Bk to proporcja ludności czarnoskórej w danej miejscowości.
-            13. LSTAT: Procent ludności o niższym statusie społecznym.
-            14. MEDV: Mediana wartości domów właścicieli w tysiącach dolarów.
+        Projekt polega na klasyfikacji wieku muszli abalonów na podstawie różnych cech fizycznych, takich jak wymiary, wagi i płeć muszli.
+        Wartość Rings reprezentuje liczbę pierścieni na muszli, co odpowiada jej wiekowi.
+        Poniżej opis parametrów w bazie:
+            1. Sex: Płeć muszli. Może przyjąć wartości M = 0 (mężczyzna), F = 1 (kobieta) lub I = 2 (niemowlę).
+            2. Length: Długość muszli, mierzona w milimetrach (mm), będąca najdłuższym wymiarem muszli.
+            3. Diameter: Średnica muszli, mierzona w milimetrach (mm), w kierunku prostopadłym do długości.
+            4. Height: Wysokość muszli wraz z mięsem, mierzona w milimetrach (mm).
+            5. Whole weight: Całkowita waga muszli, mierzona w gramach (g), obejmująca muszlę oraz mięso.
+            6. Shucked weight: Waga samego mięsa, mierzona w gramach (g), po oddzieleniu od muszli.
+            7. Viscera weight: Waga wnętrzności muszli, mierzona w gramach (g), po usunięciu wnętrzności.
+            8. Shell weight: Waga muszli, mierzona w gramach (g), po wysuszeniu.
+            9. Rings: Liczba pierścieni na muszli. To cecha, którą chcemy przewidywać.
             
-        Na podstawie mediany ceny mieszkań (MEDV) dane są klasyfikowane na dwie grupy: niską (0) i wysoką (1) cenę. Drzewo decyzyjne jest trenowane na przygotowanych danych i wykorzystywane do 
-        przewidywania klasy dla nowych danych. Skrypt zawiera także wizualizację drzewa decyzyjnego oraz ocenę modelu, w tym dokładność klasyfikacji oraz raport z wynikami klasyfikacji.
+        Na podstawie mediany ilości pierścieni dane są klasyfikowane na dwie grupy: Younger (0) i Older (1).
+        Drzewo decyzyjne jest trenowane na przygotowanych danych i wykorzystywane do przewidywania klasy dla nowych danych. 
+        Skrypt zawiera także wizualizację drzewa decyzyjnego oraz ocenę modelu, w tym dokładność klasyfikacji oraz raport z wynikami klasyfikacji.
 """
 
 
@@ -46,29 +44,32 @@ def load_and_prepare_data(file_path):
     """
     Description:
         Wczytuje dane z pliku CSV i przygotowuje je do analizy.
-        Zbiór danych jest uzupełniany o kolumnę klasyfikującą ceny domów na podstawie mediany.
+        Zbiór danych jest uzupełniany o kolumnę klasyfikującą ilość pierścieni na podstawie mediany.
 
-        >> data = pd.read_csv(file_path, sep="\\s+")
+        >> data = pd.read_csv(file_path, sep=",")
             Args:
-                - sep="\\s+": Oznacza separator pomiędzy danymi, które są w tym przypadku odzielane spacjami.
+                - sep=",": Oznacza separator pomiędzy danymi, które są w tym przypadku odzielane przecinkami.
+        >> data['Rings_Class'] = (data['Rings'] > median_rings).astype(int)
+            - .astype(int): zamienia 0 na False i 0 na True.
 
     Args:
         - file_path (str): Ścieżka do pliku z danymi.
 
     Returns:
         - X (DataFrame): Dane wejściowe (wszystkie cechy oprócz MEDV i PRICE_CLASS).
-        - y (Series): Kolumna docelowa, czyli PRICE_CLASS, 0 lub 1.
+        - y (Series): Kolumna docelowa, czyli Rings_Class, 0 lub 1.
     """
-    data = pd.read_csv(file_path, sep="\\s+")
+    data = pd.read_csv(file_path, sep=",")
     columns = [
-        "CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", "RAD", "TAX", "PTRATIO", "B", "LSTAT", "MEDV"
+        "Sex", "Length", "Diameter", "Height", "Whole_weight", "Shucked_weight", "Viscera_weight", "Shell_weight", "Rings"
     ]
     data.columns = columns
+    data["Sex"] = data["Sex"].map({"M": 0, "F": 1, "I": 2})
 
-    median_price = data["MEDV"].median()
-    data["PRICE_CLASS"] = (data["MEDV"] > median_price).astype(int)
-    X = data.drop(["MEDV", "PRICE_CLASS"], axis=1)
-    y = data["PRICE_CLASS"]
+    median_rings = data['Rings'].median()
+    data['Rings_Class'] = (data['Rings'] > median_rings).astype(int)
+    X = data.drop(["Rings", "Rings_Class"], axis=1)
+    y = data["Rings_Class"]
 
     return X, y
 
@@ -139,10 +140,10 @@ def visualize_decision_tree(clf_tree, feature_names):
         - clf_tree (DecisionTreeClassifier): Wytrenowany model drzewa decyzyjnego.
         - feature_names (list): Lista nazw cech.
     """
-    plt.figure(figsize=(35, 10))
-    tree.plot_tree(clf_tree, filled=True, feature_names=feature_names, class_names=["Low", "High"],  rounded=True, fontsize=10)
-    plt.title("Boston House Price Decision Tree")
-    # plt.savefig("decision_tree_plot.png", bbox_inches="tight")
+    plt.figure(figsize=(42, 10))
+    tree.plot_tree(clf_tree, filled=True, feature_names=feature_names, class_names=["Younger", "Older"], rounded=True, fontsize=9)
+    plt.title("Age of Abalone")
+    # plt.savefig("decision_tree_abalone_plot.png", bbox_inches="tight")
     plt.show()
 
 
@@ -160,6 +161,14 @@ def predict_sample_data(clf_tree, scaler, sample_data, feature_names):
     Returns:
         - predicted_class (ndarray): Przewidywana klasa dla przykładowych danych.
     """
+
+    if isinstance(sample_data[0][0], str):
+        """
+            Description:
+                Sprawdzamy czy w pierwszej wartości podaliśmy (int) czy (str) i zawsze zwraca (int) w to miejsce.
+        """
+        sample_data[0][0] = {"M": 0, "F": 1, "I": 2}.get(sample_data[0][0].upper())
+
     sample_data_df = pd.DataFrame(sample_data, columns=feature_names)
     sample_data_scaled = scaler.transform(sample_data_df)
     predicted_class = clf_tree.predict(sample_data_scaled)
@@ -169,14 +178,14 @@ def predict_sample_data(clf_tree, scaler, sample_data, feature_names):
 def main():
     """
         Description:
-            Przykładowe wykorzystanie drzewa decyzyjnego na danych "Boston House Price Dataset".
+            Przykładowe wykorzystanie drzewa decyzyjnego na danych "Abalone".
     """
 
     """
         Description:
             Podział na zbiory treningowe i testowe oraz skalowanie.
     """
-    X, y = load_and_prepare_data("housing.data.txt")
+    X, y = load_and_prepare_data("abalone.data")
 
     """
         Description:
@@ -206,7 +215,8 @@ def main():
         Description:
             Przewidywanie dla przykładowych danych.
     """
-    sample_data = [[0.1, 25.0, 5.0, 0, 0.5, 6.0, 70.0, 4.0, 1, 300, 15, 390, 5]]
+
+    sample_data = [['m',0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
     predicted_class = predict_sample_data(clf_tree, scaler, sample_data, X.columns)
     print("Przykładowe dane:", sample_data)
     print("Przewidywana klasa:", predicted_class)
