@@ -52,7 +52,7 @@ def load_and_prepare_data(file_path):
             Args:
                 - sep="\\s+": Oznacza separator pomiędzy danymi, które są w tym przypadku odzielane spacjami.
         >> data["PRICE_CLASS"] = (data["MEDV"] > median_price).astype(int)
-            - .astype(int): zamienia 0 na False i 0 na True.
+            - .astype(int): zamienia 0 na False i 1 na True.
 
     Args:
         - file_path (str): Ścieżka do pliku z danymi.
