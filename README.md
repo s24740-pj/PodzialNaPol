@@ -149,7 +149,7 @@ Na podstawie mediany ceny mieszkań `MEDV` dane są klasyfikowane na dwie grupy:
 
 ### Wizualizacja SVM
 ![SVM_plot_boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/SVM_plot_boston_house_price.png)
-### Dokładność drzewa i przykładowe użycie
+### Dokładność SVC i przykładowe użycie
 ![SVM_terminal__boston_house_price.png](Zjazd4_Klasyfikacja/Screenshots/SVM_terminal__boston_house_price.png)
 
 ## Problem przewidywania wieku Abalone
@@ -187,3 +187,20 @@ Lub
     [['m',0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
 ```
 ![decision_tree_terminal_abalone.png](Zjazd4_Klasyfikacja/Screenshots/decision_tree_terminal_abalone.png)
+
+### SVM (SVC)
+Na podstawie `mediany` ilości pierścieni dane są `klasyfikowane` na dwie grupy: `Younger (0)` i `Older (1)`, definiując wiek Abalone.\
+`Model SVC` jest trenowany na przygotowanych danych i wykorzystywane do przewidywania klasy dla nowych danych. \
+Skrypt zawiera także `wizualizację` klasyfikacji SVC oraz `ocenę modelu`, w tym `dokładność klasyfikacji` oraz `raport z wynikami klasyfikacji`.
+`BONUS` skrypt zawiera użycie różnych rodzaji kernel function z różnymi parametrami.
+
+Płeć w danych są przeliczane w postaci `"M": 0, "F": 1, "I": 2`.
+
+### Wizualizacja SVM
+![SVM_plot_abalone.png](Zjazd4_Klasyfikacja/Screenshots/SVM_plot_abalone.png)
+### Dokładność SVC i przykładowe użycie
+Dane mogą być podane w postaci:
+```terminal
+    [[0,0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
+```
+![SVM_terminal_abalone.png](Zjazd4_Klasyfikacja/Screenshots/SVM_terminal_abalone.png)
