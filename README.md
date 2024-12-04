@@ -336,7 +336,7 @@ Rozwinięcie skrótów:
 
 W samym projekcie przetestowaliśmy różne rodzaje danych, które będą miały dobrą korelację między sobą na tyle by osiągnąć około `80% dokładności`.\
 Zapytaliśmy pare `prawdziwych osób` do przetestowania naszego modelu oraz postawiliśmy `ChatGPT` na to by odpowiedział na pytania jako osoba `pełnoletnia` i `niepełnoletnia`.\
-Sprawdziliśmy to na dwóch testach, różnią się one dwoma pytaniami. W drugim teście nie pytamy o płęć ale za to pytamy o platformę, na której najczęściej gra.\
+Sprawdziliśmy to na dwóch testach, różnią się one dwoma pytaniami. Znajdują się one w `Zjazd4_Klasyfikacja/Bonus/GamingData_Questions.txt`. W drugim teście nie pytamy o płęć ale za to pytamy o platformę, na której najczęściej gra.\
 Wszystkim odpowiadającym również ufamy że odpowiadają poprawnie.
 
 ### Wykoresy z ankiety
