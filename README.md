@@ -204,3 +204,152 @@ Dane mogą być podane w postaci:
     [[0,0.39,0.31,0.1,0.406,0.1745,0.093,0.125]]
 ```
 ![SVM_terminal_abalone.png](Zjazd4_Klasyfikacja/Screenshots/SVM_terminal_abalone.png)
+
+## Bonus
+Stworzyliśmy ankietę wsród graczy.\
+Link do ankiety: [Ankieta](https://forms.gle/VGM7HoqHYkRwqTNn9) \
+Zebraliśmy 21 różnych informacji na podstawie, których model będzie w stanie przewidzieć czy osoba odpowiadająca na 12 z nich jest pełnoletnia.
+50% danych do nauczenia modelu są osobami pełnoletnimi a drugie 50% to osoby niepełnoletnie.\
+Odpowiedzi nie były weryfikowane, czyt. nie sprawdzaliśmy czy dana osoba faktycznie ma daną ilość sprzętu czy też sprawdzaliśmy wiek dokumentem tożsamości itd.\
+Zaufaliśmy że wszystkie 120 osób odpowiedziało prawidłowo.
+        
+Rozwinięcie skrótów:
+1. `AGE`: Ile masz lat? (Podaj wiek)\
+    [Integer]
+2. `SEX`: Jaka jest Twoja płeć?\ 
+    0: Mężczyzna\
+    1: Kobieta\
+    2: Inna
+4. `PREFERRED_GENRE`: Jaki gatunek gier preferujesz?\
+    0: Strzelanki\
+    1: Battle Royale\
+    2: Gry RPG; Souls Like\
+    3: Gry strategiczne\
+    4: Symulatory\
+    5: Gry logiczne\
+    6: Gry przygodowe\
+    7: Inne
+5. `USE_MODS`: Czy używasz modów do gier?\
+    0: Tak, często\
+    1: Okazjonalnie\
+    2: Nie
+6. `DEVICE`: Na jakim sprzęcie grasz najczęściej?\
+    0: PC\
+    1: Konsola (PS/Xbox)\
+    2: Mobilne urządzenia\
+    3: Inne
+7. `DEVICES_COUNT`: Z ilu sprzętów korzystasz do grania? (Podaj ilość)\
+    [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
+8. `PLATFORM`: Na jakiej platformie grasz najczęściej?\
+    0: Steam\
+    1: Origin\
+    2: Epic Games\
+    3: Inne
+9. `PLAY_TIME`: Ile czasu dziennie średnio spędzasz na grach (Podaj w godzinach)?\
+    [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
+10. `PLAY_TIME_OF_DAY`: O jakiej porze dnia preferujesz granie?\
+    0: Rano\
+    1: Po południe\
+    2: Wieczór\
+    3: Późna noc
+11. `GAME_MODE`: Jaki tryb gry preferujesz?\
+    0: Gra lokalna (Singleplayer)\
+    1: Gra online (Multiplayer)
+12. `VOICE_CHAT_START`: Kiedy zacząłeś/aś używać czatu głosowego w grach komputerowych?\
+    0: Nigdy\
+    1: Przed 2000\
+    2: 2000–2010\
+    3: 2010–2020\
+    4: Po 2020
+13. `FAV_GAME`: Jaką gre lubisz najbardziej? (Wybierz jedną)\
+    0: Counter Strike (2, Global Offensive)\
+    1: Valorant\
+    2: Fortnite\
+    3: Minecraft\
+    4: League of Legends\
+    5: The Sims 4\
+    6: FIFA (np. FIFA 24)\
+    7: Call of Duty\
+    8: Roblox\
+    9: GTA V\
+    10: Mario\
+    11: Zelda\
+    12: Pokémon\
+    13: Inna
+14. `VISUAL_IMPACT`: Która z poniższych gier wywarła na Tobie największe wrażenie wizualne? (Wybierz jedną)\
+    0: Mario\
+    1: The Legend of Zelda: Breath of the Wild\
+    2: Final Fantasy\
+    3: Half-Life 2\
+    4: Vrchat\
+    5: Fortnite\
+    6: The Witcher 3: Wild Hunt\
+    7: Horizon Zero Dawn\
+    8: Cyberpunk 2077\
+    9: GTA 5\
+    10: Inne
+15. `COMM_METHOD`: W jakiej formie najczęściej komunikujesz się z innymi podczas grania?\
+    0: Discord\
+    1: TeamSpeak\
+    2: Inne
+16. `GAME_SKILLS`: Jak oceniasz swoje umiejętności w grach komputerowych?\
+    0: Bardzo zaawansowane\
+    1: Średnio zaawansowane\
+    2: Podstawowe\
+    3: Brak umiejętności
+17. `FOLLOW_ESPORTS`: Czy śledzisz esport lub zawody gamingowe?\
+    0: Tak, regularnie\
+    1: Tak, sporadycznie\
+    2: Nie, nie interesuje mnie to
+18. `NOSTALGIC_GAMES`: W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)\
+    [Integer]
+19. `FIRST_DEVICE`: Jaki był twój pierwszy sprzęt, na którym zagrałeś/aś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).\
+    0: Atari\
+    1: NES/SNES\
+    2: PlayStation 1/2\
+    3: Xbox (Original/360)\
+    4: Game Boy/DS\
+    5: Współczesna konsola (PS4/PS5, Xbox One/Series, itp.)\
+    6: PC (przed 2005 rokiem)\
+    7: PC (po 2005 roku)\
+    8: Smartfon/Telefon (przed 2005 rokiem)\
+    9: Smartfon/Telefon (po 2005 roku)
+20. `ICONIC_MOMENTS`: Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?\
+    0: Premiera Pokémon Red/Blue\
+    1: Hype wokół gier w czasach ery Y2K\
+    2: Premiera Halo 3\
+    3: Szał na Minecrafta w latach 2010\
+    4: Fortnite World Cup
+21. `GAME_SOUNDS`: Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?\
+    0: Dźwięk zbierania monety z Mario\
+    1: Motyw przewodni z "The Legend of Zelda"\
+    2: Intro z "Halo"\
+    3: Motyw przewodni z "Tetrisa"\
+    4: „Still Alive” z "Portal"\
+    5: Dźwięk Creepera z "Minecraft"\
+    6: Dźwięk z "Roblox" "Death Sound"\
+    7: Motyw przewodni z "The Elder Scrolls V: Skyrim" (Dragonborn)\
+    8: „Megalovania” z "Undertale"\
+    9: Dźwięk piosenki Victory Royale z "Fortnite"\
+    10: Motyw przewodni z "The Last of Us" (melancholijna gitara)\
+    11: Muzyka z lobby CSGO
+
+W samym projekcie przetestowaliśmy różne rodzaje danych, które będą miały dobrą korelację między sobą na tyle by osiągnąć około `80% dokładności`.\
+Zapytaliśmy pare `prawdziwych osób` do przetestowania naszego modelu oraz postawiliśmy `ChatGPT` na to by odpowiedział na pytania jako osoba `pełnoletnia` i `niepełnoletnia`.\
+Sprawdziliśmy to na dwóch testach, różnią się one dwoma pytaniami. W drugim teście nie pytamy o płęć ale za to pytamy o platformę, na której najczęściej gra.\
+Wszystkim odpowiadającym również ufamy że odpowiadają poprawnie.
+
+### Wykoresy z ankiety
+Poniżej przykładowe wykresy. Reszta znajduje się w `Zjazd4_Klasyfikacja/Wykresy/Screenshots/`
+![Jaka_jest_Twoja_płeć?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Jaka_jest_Twoja_p%C5%82e%C4%87%3F_plot.png)
+![Jak_oceniasz_swoje_umiejętności_w_grach_komputerowych?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Jak_oceniasz_swoje_umiej%C4%99tno%C5%9Bci_w_grach_komputerowych%3F_plot.png)
+![Która_z_poniższych_gier_wywarła_na_Tobie_największe_wrażenie_wizualne?_(Wybierz_jedną)_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Kt%C3%B3ra_z_poni%C5%BCszych_gier_wywar%C5%82a_na_Tobie_najwi%C4%99ksze_wra%C5%BCenie_wizualne%3F_%28Wybierz_jedn%C4%85%29_plot.png)
+![Kiedy_zacząłeś_aś_używać_czatu_głosowego_w_grach_komputerowych?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Kiedy_zacz%C4%85%C5%82e%C5%9B_a%C5%9B_u%C5%BCywa%C4%87_czatu_g%C5%82osowego_w_grach_komputerowych%3F_plot.png)
+![Na_jakim_sprzęcie_grasz_najczęściej?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Na_jakim_sprz%C4%99cie_grasz_najcz%C4%99%C5%9Bciej%3F_plot.png)
+![Czy_używasz_modów_do_gier?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Czy_u%C5%BCywasz_mod%C3%B3w_do_gier%3F_plot.png)
+### Korelacja danych
+![correlationMatrix_Gaming_plot.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/correlationMatrix_Gaming_plot.png)
+### Wizualizacja Drzewa Decyzyjnego
+![decision_tree_gaming_plot.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/decision_tree_gaming_plot.png)
+### Przykład użycia Drzewa Decyzyjnego
+![decision_tree_terminal_Gaming.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/decision_tree_terminal_Gaming.png)

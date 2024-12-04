@@ -1,0 +1,170 @@
+====Test1====
+1. Jaka jest Twoja płeć?
+    0 Mężczyzna
+    1 Kobieta
+    2 Inna
+
+2. Jaki gatunek gier preferujesz?
+    0 Strzelanki
+    1 Battle Royale
+    2 Gry RPG; Souls Like
+    3 Gry strategiczne
+    4 Symulatory
+    5 Gry logiczne
+    6 Gry przygodowe
+    7 Inne
+
+3. Czy używasz modów do gier?
+    0 Tak, często
+    1 Okazjonalnie
+    2 Nie
+
+4. W jakich porach dnia preferujesz granie?
+    0 Rano
+    1 Po południe
+    2 Wieczór
+    3 Późna noc
+
+5. Jaki tryb gry preferujesz?
+    0 Gra lokalna (Singleplayer)
+    1 Gra online (Multiplayer)
+
+6. Kiedy zacząłeś używać czatu głosowego w grach komputerowych?
+    0 Nigdy
+    1 Przed 2000
+    2 2000–2010
+    3 2010–2020
+    4 Po 2020
+
+7. W jakiej formie najczęściej komunikujesz się z innymi podczas grania?
+    0 Discord
+    1 TeamSpeak
+    2 Inne
+
+8. Jak oceniasz swoje umiejętności komputerowe?
+    0 Bardzo zaawansowane
+    1 Średnio zaawansowane
+    2 Podstawowe
+    3 Brak umiejętności
+
+9. W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)
+    0-10
+
+10. Jaki był twój pierwszy sprzęt, na którym zagrałeś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).
+    0 Atari
+    1 NES/SNES
+    2 PlayStation 1/2
+    3 Xbox (Original/360)
+    4 Game Boy/DS
+    5 Współczesna konsola (PS4/PS5, Xbox One/Series, itp.)
+    6 PC (przed 2005 rokiem)
+    7 PC (po 2005 roku)
+    8 Smartfon/Telefon (przed 2005 rokiem)
+    9 Smartfon/Telefon (po 2005 roku)
+
+11. Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?
+    0 Premiera Pokémon Red/Blue
+    1 Hype wokół gier w czasach ery Y2K
+    2 Premiera Halo 3
+    3 Szał na Minecrafta w latach 2010
+    4 Fortnite World Cup
+
+12. Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?
+    0 Dźwięk zbierania monety z Mario
+    1 Motyw przewodni z "The Legend of Zelda"
+    2 Intro z "Halo"
+    3 Motyw przewodni z "Tetrisa"
+    4 „Still Alive” z "Portal"
+    5 Dźwięk Creepera z "Minecraft"
+    6 Dźwięk z "Roblox" "Death Sound"
+    7 Motyw przewodni z "The Elder Scrolls V: Skyrim" (Dragonborn)
+    8 „Megalovania” z "Undertale"
+    9 Dźwięk piosenki Victory Royale z "Fortnite"
+    10 Motyw przewodni z "The Last of Us" (melancholijna gitara)
+    11 Muzyka z lobby CSGO
+
+====Test2====
+1. Jaki gatunek gier preferujesz?
+    0 Strzelanki
+    1 Battle Royale
+    2 Gry RPG; Souls Like
+    3 Gry strategiczne
+    4 Symulatory
+    5 Gry logiczne
+    6 Gry przygodowe
+    7 Inne
+
+2. Czy używasz modów do gier?
+    0 Tak, często
+    1 Okazjonalnie
+    2 Nie
+
+3. Na jakiej platformie grasz najczęściej?
+    0 Steam
+    1 Origin
+    2 Epic Games
+    3 Inne
+
+4. W jakich porach dnia preferujesz granie?
+    0 Rano
+    1 Po południe
+    2 Wieczór
+    3 Późna noc
+
+5. Jaki tryb gry preferujesz?
+    0 Gra lokalna (Singleplayer)
+    1 Gra online (Multiplayer)
+
+6. Kiedy zacząłeś używać czatu głosowego w grach komputerowych?
+    0 Nigdy
+    1 Przed 2000
+    2 2000–2010
+    3 2010–2020
+    4 Po 2020
+
+7. W jakiej formie najczęściej komunikujesz się z innymi podczas grania?
+    0 Discord
+    1 TeamSpeak
+    2 Inne
+
+8. Jak oceniasz swoje umiejętności komputerowe?
+    0 Bardzo zaawansowane
+    1 Średnio zaawansowane
+    2 Podstawowe
+    3 Brak umiejętności
+
+9. W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)
+    0-10
+
+10. Jaki był twój pierwszy sprzęt, na którym zagrałeś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).
+    0 Atari
+    1 NES/SNES
+    2 PlayStation 1/2
+    3 Xbox (Original/360)
+    4 Game Boy/DS
+    5 Współczesna konsola (PS4/PS5, Xbox One/Series, itp.)
+    6 PC (przed 2005 rokiem)
+    7 PC (po 2005 roku)
+    8 Smartfon/Telefon (przed 2005 rokiem)
+    9 Smartfon/Telefon (po 2005 roku)
+
+11. Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?
+    0 Premiera Pokémon Red/Blue
+    1 Hype wokół gier w czasach ery Y2K
+    2 Premiera Halo 3
+    3 Szał na Minecrafta w latach 2010
+    4 Fortnite World Cup
+
+12. Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?
+    0 Dźwięk zbierania monety z Mario
+    1 Motyw przewodni z "The Legend of Zelda"
+    2 Intro z "Halo"
+    3 Motyw przewodni z "Tetrisa"
+    4 „Still Alive” z "Portal"
+    5 Dźwięk Creepera z "Minecraft"
+    6 Dźwięk z "Roblox" "Death Sound"
+    7 Motyw przewodni z "The Elder Scrolls V: Skyrim" (Dragonborn)
+    8 „Megalovania” z "Undertale"
+    9 Dźwięk piosenki Victory Royale z "Fortnite"
+    10 Motyw przewodni z "The Last of Us" (melancholijna gitara)
+    11 Muzyka z lobby CSGO
