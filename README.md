@@ -339,6 +339,24 @@ Zapytaliśmy pare `prawdziwych osób` do przetestowania naszego modelu oraz post
 Sprawdziliśmy to na dwóch testach, różnią się one dwoma pytaniami. Znajdują się one w `Zjazd4_Klasyfikacja/Bonus/GamingData_Questions.txt`. W drugim teście nie pytamy o płęć ale za to pytamy o platformę, na której najczęściej gra.\
 Wszystkim odpowiadającym również ufamy że odpowiadają poprawnie.
 
+### Surowe dane z ankiety
+```terminal
+"Sygnatura czasowa","Ile masz lat? (Podaj wiek)","Jaka jest Twoja płeć?","Jaki gatunek gier preferujesz?","Czy używasz modów do gier?","Na jakim sprzęcie grasz najczęściej?","Z ilu sprzętów korzystasz do grania? (Podaj ilość)","Na jakiej platformie grasz najczęściej?","Ile czasu dziennie średnio spędzasz na grach (Podaj w godzinach)?","O jakiej porze dnia preferujesz granie?","Jaki tryb gry preferujesz?","Kiedy zacząłeś/aś używać czatu głosowego w grach komputerowych?","Jaką gre lubisz najbardziej? (Wybierz jedną)","Która z poniższych gier wywarła na Tobie największe wrażenie wizualne? (Wybierz jedną)","W jakiej formie najczęściej komunikujesz się z innymi podczas grania?","Jak oceniasz swoje umiejętności w grach komputerowych?","Czy śledzisz esport lub zawody gamingowe?","W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)","Jaki był twój pierwszy sprzęt, na którym zagrałeś/aś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).","Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?","Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?"
+"2024/11/29 1:22:09 AM CET","22","Mężczyzna","Strzelanki","Okazjonalnie","PC","2","Steam","4","Wieczór","Gra online (Multiplayer)","2010–2020","Counter Strike 2","Cyberpunk 2077","Discord","Średnio zaawansowane","Tak, regularnie","8","PC (po 2000 roku)","Szał na Minecrafta w latach 2010","„Still Alive” z ""Portal"""
+"2024/11/29 1:30:54 AM CET","22","Kobieta","Gry przygodowe","Okazjonalnie","PC","2","Steam","5","Późna noc","Gra lokalna (Singleplayer)","2010–2020","League of Legends","The Witcher 3: Wild Hunt","Discord","Średnio zaawansowane","Tak, regularnie","4","PlayStation 1/2","Szał na Minecrafta w latach 2010","„Megalovania” z ""Undertale"""
+"2024/11/29 5:44:59 PM CET","21","Mężczyzna","Gry RPG","Okazjonalnie","PC","3","Steam","30","Rano","Gra lokalna (Singleplayer)","2010–2020","GTA V","Cyberpunk 2077","Discord","Średnio zaawansowane","Tak, sporadycznie","7","PlayStation 1/2","Szał na Minecrafta w latach 2010","Motyw przewodni z ""The Elder Scrolls V: Skyrim"" (Dragonborn)"
+"2024/11/29 5:45:13 PM CET","22","Mężczyzna","Souls Like","Tak, często","PC","2","Steam","8-10","Po południe","Gra lokalna (Singleplayer)","2010–2020","GTA V","Final Fantasy","Discord","Średnio zaawansowane","Tak, sporadycznie","6","Xbox (Original/360)","Szał na Minecrafta w latach 2010","Dźwięk Creepera z ""Minecraft"""
+"2024/11/29 5:58:39 PM CET","26","Mężczyzna","Strzelanki","Okazjonalnie","PC","2","Steam","2","Wieczór","Gra online (Multiplayer)","2010–2020","Counter Strike (2, Global Offensive)","The Witcher 3: Wild Hunt","TeamSpeak","Średnio zaawansowane","Tak, sporadycznie","7","PC (przed 2005 rokiem)","Szał na Minecrafta w latach 2010","Dźwięk zbierania monety z Mario"
+```
+### Dane po przeróbce 
+```terminal
+22,0,0,1,0,2,0,4,2,1,3,0,8,0,1,0,8,7,3,4
+22,1,6,1,0,2,0,5,3,0,3,4,6,0,1,0,4,2,3,8
+21,0,2,1,0,3,0,5,0,0,3,9,8,0,1,1,7,2,3,7
+22,0,2,0,0,2,0,8,1,0,3,9,2,0,1,1,6,3,3,5
+26,0,0,1,0,2,0,2,2,1,3,0,6,1,1,1,7,6,3,0
+```
+
 ### Wykoresy z ankiety
 Poniżej przykładowe wykresy. Reszta znajduje się w `Zjazd4_Klasyfikacja/Wykresy/Screenshots/`
 ![Jaka_jest_Twoja_płeć?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Jaka_jest_Twoja_p%C5%82e%C4%87%3F_plot.png)
