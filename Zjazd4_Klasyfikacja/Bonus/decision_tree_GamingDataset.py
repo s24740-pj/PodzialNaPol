@@ -31,7 +31,7 @@ import seaborn as sns
     Description:
         Stworzyliśmy ankietę wsród graczy.
         Link do ankiety: https://forms.gle/VGM7HoqHYkRwqTNn9
-        Zebraliśmy 21 różnych informacji na podstawie, których model będzie w stanie przewidzieć czy osoba odpowiadająca na 12 z nich jest pełnoletnia.
+        Zebraliśmy 20 różnych informacji na podstawie, których model będzie w stanie przewidzieć czy osoba odpowiadająca na 12 z nich jest pełnoletnia.
         50% danych do nauczenia modelu są osobami pełnoletnimi a drugie 50% to osoby niepełnoletnie.
         Odpowiedzi nie były weryfikowane, czyt. nie sprawdzaliśmy czy dana osoba faktycznie ma daną ilość sprzętu czy też sprawdzaliśmy wiek dokumentem tożsamości itd.
         Zaufaliśmy że wszystkie 120 osób odpowiedziało prawidłowo.
