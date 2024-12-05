@@ -208,7 +208,7 @@ Dane mogą być podane w postaci:
 ## Bonus
 Stworzyliśmy ankietę wsród graczy.\
 Link do ankiety: [Ankieta](https://forms.gle/VGM7HoqHYkRwqTNn9) \
-Zebraliśmy 21 różnych informacji na podstawie, których model będzie w stanie przewidzieć czy osoba odpowiadająca na 12 z nich jest pełnoletnia.
+Zebraliśmy 20 różnych informacji na podstawie, których model będzie w stanie przewidzieć czy osoba odpowiadająca na 12 z nich jest pełnoletnia.
 50% danych do nauczenia modelu są osobami pełnoletnimi a drugie 50% to osoby niepełnoletnie.\
 Odpowiedzi nie były weryfikowane, czyt. nie sprawdzaliśmy czy dana osoba faktycznie ma daną ilość sprzętu czy też sprawdzaliśmy wiek dokumentem tożsamości itd.\
 Zaufaliśmy że wszystkie 120 osób odpowiedziało prawidłowo.
@@ -357,7 +357,7 @@ Wszystkim odpowiadającym również ufamy że odpowiadają poprawnie.
 26,0,0,1,0,2,0,2,2,1,3,0,6,1,1,1,7,6,3,0
 ```
 
-### Wykoresy z ankiety
+### Wykresy z ankiety
 Poniżej przykładowe wykresy. Reszta znajduje się w `Zjazd4_Klasyfikacja/Wykresy/Screenshots/`
 ![Jaka_jest_Twoja_płeć?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Jaka_jest_Twoja_p%C5%82e%C4%87%3F_plot.png)
 ![Jak_oceniasz_swoje_umiejętności_w_grach_komputerowych?_plot.png](Zjazd4_Klasyfikacja/Bonus/Wykresy/Jak_oceniasz_swoje_umiej%C4%99tno%C5%9Bci_w_grach_komputerowych%3F_plot.png)
@@ -371,3 +371,26 @@ Poniżej przykładowe wykresy. Reszta znajduje się w `Zjazd4_Klasyfikacja/Wykre
 ![decision_tree_gaming_plot.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/decision_tree_gaming_plot.png)
 ### Przykład użycia Drzewa Decyzyjnego
 ![decision_tree_terminal_Gaming.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/decision_tree_terminal_Gaming.png)
+
+
+### SVM
+W samym projekcie przetestowaliśmy różne rodzaje danych, które będą miały dobrą korelację między sobą.
+Użyliśmy różnych rodzaji kernel function z różnymi parametrami.
+Prawidłowy dobór danych jest na tyle istotny, że znacząco wpływa na dokładność modeli.
+Zostało to udowodnione i przedstawione na teście 1 oraz teście 2, gdzie dokładność modelu dla każdego z badanych jąder jest znacząco inna.
+Testy różnią się dwoma pytaniami. W drugim teście nie pytamy o płęć ale za to pytamy o platformę, na której najczęściej gra.
+Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia. Wykorzystujemy w tym celu SVM.
+
+
+### Wizualizacja SVM
+![SVM_plot_kernel_test1_vs_test2.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_plot_kernel_test1_vs_test2.png)
+![SVM_plot_gaming.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_plot_gaming.png)
+
+### Dokładność SVM i przykładowe użycie
+Dane mogą być podane w postaci:
+```terminal
+    [[0, 0, 1, 3, 1, 3, 0, 1, 9, 6, 3, 4]]
+    [[0, 1, 0, 3, 1, 3, 0, 1, 9, 6, 3, 4]]
+```
+![SVM_terminal_test1.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test1.png)
+![SVM_terminal_test2.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test2.png)
