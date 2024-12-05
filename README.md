@@ -392,5 +392,7 @@ Dane mogą być podane w postaci:
     [[0, 0, 1, 3, 1, 3, 0, 1, 9, 6, 3, 4]]
     [[0, 1, 0, 3, 1, 3, 0, 1, 9, 6, 3, 4]]
 ```
+#### Test 1
 ![SVM_terminal_test1.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test1.png)
+#### Test2
 ![SVM_terminal_test2.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test2.png)
