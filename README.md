@@ -3,6 +3,7 @@
 - [Zjazd 2 | FuzzyLogic: Ocena ryzyka jazdy + animacja (zastosowanie w praktyce)](#zjazd-2--fuzzylogic-ocena-ryzyka-jazdy--animacja-zastosowanie-w-praktyce)
 - [Zjazd 3 | Clustering: Rekomendacja filmow](#zjazd-3--clustering-rekomendacja-filmow)
 - [Zjazd 4 | Klasyfikacja](#zjazd-4--klasyfikacja)
+- [Zjazd 5 | Sieć neuronowa](#zjazd-5--sieć-neuronowa)
 
 ---
 
@@ -396,3 +397,64 @@ Dane mogą być podane w postaci:
 ![SVM_terminal_test1.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test1.png)
 #### Test2
 ![SVM_terminal_test2.png](Zjazd4_Klasyfikacja/Bonus/Screenshots/SVM_terminal_test2.png)
+
+
+---
+
+# Zjazd 5 | Sieć neuronowa
+
+**Folder:** `Zjazd4_Sieć_Neuronowa`
+
+## Problem 2 | Rozpoznawianie zwierząt CIFAR10
+**Folder:** `Zjazd4_Sieć_Neuronowa/2`
+
+W tym problemie używamy dataset `CIFAR10`, który zawiera `60000` kolorowych zdjęć i `10` klas, każdy po `6000` obrazków:
+1. "Samolot", 
+2. "Samochód", 
+3. "Ptak", 
+4. "Kot", 
+5. "Jeleń",
+6. "Pies", 
+7. "Żaba", 
+8. "Koń", 
+9. "Statek", 
+10. "Ciężarówka".
+
+Uczymy model rozróżniać powyższe obiekty i zwierzęta, jednak skupiamy się na `zwierzętach`.
+
+Nauczony model zostaje zapisany do pliku `model.keras` by uniknąć ponownego uczenia.
+
+### Przykładowe 10 zdjęć z datasetu CIFAR10
+![WizualizacjaDanych.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/WizualizacjaDanych.png)
+
+### Model summary
+![model_summary.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/model_summary.png)
+
+### Model evaluate
+![model_evaluate.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/model_evaluate.png)
+
+### Przetestowanie modelu zdjęciami ze zbioru testowego
+![Kot_Kot.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Kot_Kot.png)
+![Samolot_Samolot.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Samolot_Samolot.png)
+![Statek_Statek.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Statek_Statek.png)
+![Żaba_Żaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/%C5%BBaba_%C5%BBaba.png)
+
+### Przetestowanie modelu na podstawie zdjęć zewnętrznych
+Wejście
+![kon.jpg](Zjazd5_Siec%CC%81_Neuronowa/2/kon.jpg)
+Wyjście
+![predict_kon.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_kon.png)
+
+---
+
+Wejście
+![ptak.jpg](Zjazd5_Siec%CC%81_Neuronowa/2/ptak.jpg)
+Wyjście
+![predict_ptak.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_ptak.png)
+
+---
+
+Wejście
+![zaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/zaba.png)
+Wyjście
+![predict_zaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_zaba.png)

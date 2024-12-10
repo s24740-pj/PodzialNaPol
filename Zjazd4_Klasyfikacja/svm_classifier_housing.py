@@ -75,7 +75,7 @@ def split_and_scale_data(X, y):
             X_test (ndarray): Zestaw testowy danych wejściowych.
             y_train (ndarray): Zestaw treningowy wyników.
             y_test (ndarray): Zestaw testowy wyników.
-            scaler (StandardScaler): Obiekt skalujący dane.
+            scaler (StandardScaler): Obiekt skalujący dane. Normalizuje dane tak aby miały aby miały one średnią równą 0 i odchylenie standardowe równe 1. W przypadku tych algorytmów działają lepiej na danych znormalizowanych. Ten proces zapewnia, że wszystkie cechy są w tej samej skali.
     """
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -88,7 +88,7 @@ def split_and_scale_data(X, y):
 
 def train_svm(X_train, y_train):
     """
-        Trenuje model SVM na danych treningowych.
+        Trenuje model SVM na danych treningowych. (Dostępne "jądra": linear, rbf, poly, sigmoid)
 
         Parametry:
             X_train (ndarray): Zestaw treningowy danych wejściowych.
