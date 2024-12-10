@@ -451,6 +451,7 @@ Wejście
 ![ptak.jpg](Zjazd5_Siec_Neuronowa/2/ptak.jpg)
 Wyjście
 ![predict_ptak.png](Zjazd5_Siec_Neuronowa/2/Screenshots/predict_ptak.png)
+Dodatkowe informacje: Ptak wygląda jak samolot, dlatego model mógł się pomylić.
 
 ---
 
