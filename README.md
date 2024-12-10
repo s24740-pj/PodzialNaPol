@@ -425,36 +425,36 @@ Uczymy model rozróżniać powyższe obiekty i zwierzęta, jednak skupiamy się 
 Nauczony model zostaje zapisany do pliku `model.keras` by uniknąć ponownego uczenia.
 
 ### Przykładowe 10 zdjęć z datasetu CIFAR10
-![WizualizacjaDanych.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/WizualizacjaDanych.png)
+![WizualizacjaDanych.png](Zjazd5_Siec_Neuronowa/2/Screenshots/WizualizacjaDanych.png)
 
 ### Model summary
-![model_summary.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/model_summary.png)
+![model_summary.png](Zjazd5_Siec_Neuronowa/2/Screenshots/model_summary.png)
 
 ### Model evaluate
-![model_evaluate.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/model_evaluate.png)
+![model_evaluate.png](Zjazd5_Siec_Neuronowa/2/Screenshots/model_evaluate.png)
 
 ### Przetestowanie modelu zdjęciami ze zbioru testowego
-![Kot_Kot.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Kot_Kot.png)
-![Samolot_Samolot.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Samolot_Samolot.png)
-![Statek_Statek.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/Statek_Statek.png)
-![Żaba_Żaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/%C5%BBaba_%C5%BBaba.png)
+![Kot_Kot.png](Zjazd5_Siec_Neuronowa/2/Screenshots/Kot_Kot.png)
+![Samolot_Samolot.png](Zjazd5_Siec_Neuronowa/2/Screenshots/Samolot_Samolot.png)
+![Statek_Statek.png](Zjazd5_Siec_Neuronowa/2/Screenshots/Statek_Statek.png)
+![Żaba_Żaba.png](Zjazd5_Siec_Neuronowa/2/Screenshots/%C5%BBaba_%C5%BBaba.png)
 
 ### Przetestowanie modelu na podstawie zdjęć zewnętrznych
 Wejście
-![kon.jpg](Zjazd5_Siec%CC%81_Neuronowa/2/kon.jpg)
+![kon.jpg](Zjazd5_Siec_Neuronowa/2/kon.jpg)
 Wyjście
-![predict_kon.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_kon.png)
+![predict_kon.png](Zjazd5_Siec_Neuronowa/2/Screenshots/predict_kon.png)
 
 ---
 
 Wejście
-![ptak.jpg](Zjazd5_Siec%CC%81_Neuronowa/2/ptak.jpg)
+![ptak.jpg](Zjazd5_Siec_Neuronowa/2/ptak.jpg)
 Wyjście
-![predict_ptak.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_ptak.png)
+![predict_ptak.png](Zjazd5_Siec_Neuronowa/2/Screenshots/predict_ptak.png)
 
 ---
 
 Wejście
-![zaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/zaba.png)
+![zaba.png](Zjazd5_Siec_Neuronowa/2/zaba.png)
 Wyjście
-![predict_zaba.png](Zjazd5_Siec%CC%81_Neuronowa/2/Screenshots/predict_zaba.png)
+![predict_zaba.png](Zjazd5_Siec_Neuronowa/2/Screenshots/predict_zaba.png)
