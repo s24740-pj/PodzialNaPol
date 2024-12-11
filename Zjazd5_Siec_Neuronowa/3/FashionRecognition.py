@@ -3,11 +3,12 @@ import tensorflow as tf
 import ssl
 from PIL import Image
 from matplotlib import pyplot as plt
+
 """
     Autorzy:
         Kamil Powierza
         Dawid Feister
-    
+
     Wymagane biblioteki:
         1. numpy
         2. tensorflow
@@ -16,24 +17,29 @@ from matplotlib import pyplot as plt
         5. matplotlib
 
     Description:
-        W projekcie używamy dataset CIFAR10, który zawiera 60000 kolorowych zdjęć i 10 klas, każdy po 6000 obrazków:
-            1. "Samolot", 
-            2. "Samochód", 
-            3. "Ptak", 
-            4. "Kot", 
-            5. "Jeleń",
-            6. "Pies", 
-            7. "Żaba", 
-            8. "Koń", 
-            9. "Statek", 
-            10. "Ciężarówka".
-        Uczymy model rozróżniać powyższe obiekty i zwierzęta, jednak skupiamy się na zwierzętach.
+        W tym problemie używamy dataset [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist), który zawiera `60000` czarno-białych zdjęć i `10` klas, każdy po `6000` obrazków o wielkości `28x28`:
+            1. "T-shirt/top", 
+            2. "Trouser", 
+            3. "Pullover", 
+            4. "Dress", 
+            5. "Coat",
+            6. "Sandal", 
+            7. "Shirt", 
+            8. "Sneaker", 
+            9. "Bag", 
+            10. "Ankle boot".
+            
+        Uczymy model rozróżniać powyższe `ubrania`.
+        
+        Nauczony model zostaje zapisany do pliku `model.keras` by uniknąć ponownego uczenia. 
+        
 """
+
 
 def model_maker(x_train, x_test, y_train, y_test):
     """
         Description:
-            Tworzymy model sieci neuronowej do przewidywania obiektu na zdjęciu 32x32.
+            Tworzymy model sieci neuronowej do przewidywania obiektu na zdjęciu 28x28.
 
         Args:
             - x_train (ndarray): Zbiór treningowy. (Wielowymiarowa tablica)
@@ -50,7 +56,7 @@ def model_maker(x_train, x_test, y_train, y_test):
         )
     else:
         model = tf.keras.models.Sequential([
-            tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
+            tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
             tf.keras.layers.MaxPooling2D((2, 2)),
             tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
             tf.keras.layers.MaxPooling2D((2, 2)),
@@ -64,29 +70,36 @@ def model_maker(x_train, x_test, y_train, y_test):
                       loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                       metrics=['accuracy'])
 
-        model.fit(x_train, y_train, epochs=10, validation_data=(x_test, y_test))
+        model.fit(x_train, y_train, epochs=50, validation_data=(x_test, y_test))
 
         model.save("model.keras")
 
     return model
 
+
 def load_image(plik):
     """
         Description:
-            Załadujemy zdjęcie i przygotowujemy go do formatu przystosowanego do przewidywania, m.in rozmiar 32x32.
+            Załadujemy zdjęcie i przygotowujemy go do formatu przystosowanego do przewidywania, m.in rozmiar 28x28 oraz zmiana kolorów na odwrotne.
 
         Args:
-            - plik: Lokalizacja do zdjęcie .png lub .jpg.
+            - plik: Lokalizacja do zdjęcie .png lub .jpg itp.
 
         Returns:
             - img_array: Zwraca przeformatowany ciąg liczb odwzorujący zdjęcie, przystosowany do modelu.
     """
-    img = Image.open(plik).convert('RGB')
-    img = img.resize((32, 32))
+    img = Image.open(plik).convert('L')
+    img = img.resize((28, 28))
     img_array = np.array(img)
     img_array = img_array / 255.0
-    img_array = img_array.reshape((1, 32, 32, 3))
+    img_array = img_array.reshape((1, 28, 28))
+    """
+        Description:
+            Zamiana czarny z białym i biały z czarnym.
+    """
+    img_array = 1 - img_array
     return img_array
+
 
 def predict_image(model, img_path, class_names):
     """
@@ -103,6 +116,7 @@ def predict_image(model, img_path, class_names):
     predicted_class = class_names[np.argmax(pred)]
     print(f"Klasa do przewidywania: {img_path} Przewidziana klasa: {predicted_class}")
 
+
 def main():
     """
         Description:
@@ -117,11 +131,11 @@ def main():
 
     """
         Description:
-            Zczytywanie dataset CIFAR10 i podzielenie na dane treningowe i testowe oraz dodajemy nazwy kolumn.
+            Zczytywanie dataset Fashion-MNIST i podzielenie na dane treningowe i testowe oraz dodajemy nazwy kolumn.
     """
-    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.cifar10.load_data()
+    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
     x_train, x_test = x_train / 255.0, x_test / 255.0
-    class_names = ["Samolot", "Samochód", "Ptak", "Kot", "Jeleń", "Pies", "Żaba", "Koń", "Statek", "Ciężarówka"]
+    class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
     """
         Description:
@@ -151,8 +165,9 @@ def main():
         plt.subplot(5, 5, i + 1)
         plt.xticks([])
         plt.yticks([])
-        plt.imshow(x_train[i])
-        plt.xlabel(class_names[y_train[i][0]])
+        plt.grid(False)
+        plt.imshow(x_train[i], cmap=plt.cm.binary)
+        plt.xlabel(class_names[y_train[i]])
     # plt.savefig(f"WizualizacjaDanych.png", bbox_inches="tight")
     plt.show()
 
@@ -163,19 +178,21 @@ def main():
     predictions = model.predict(x_test)
     for i in range(5):
         plt.figure(figsize=(5, 3))
-        plt.imshow(x_test[i])
-        plt.title(f"Prawdziwa: {class_names[y_test[i][0]]}, "
+        plt.imshow(x_test[i], cmap='gray')
+        plt.title(f"Prawdziwa: {class_names[y_test[i]]}, "
                   f"Przewidywana: {class_names[np.argmax(predictions[i])]}")
         plt.axis('off')
-        # plt.savefig(f"{class_names[y_test[i][0]]}_{class_names[np.argmax(predictions[i])]}.png", bbox_inches="tight")
+        # plt.savefig(f"{class_names[y_test[i]]}_{class_names[np.argmax(predictions[i])]}.png", bbox_inches="tight")
         plt.show()
 
     """
         Description:
             Załadujemy zdjęcie zewnętrzne i przewidujemy.
     """
-    predict_image(model, "zaba.png", class_names)
-    predict_image(model, "ptak.jpg", class_names)
-    predict_image(model, "kon.jpg", class_names)
+    predict_image(model, "ankle_boot.jpg", class_names)
+    predict_image(model, "tshirt.jpg", class_names)
+    predict_image(model, "dress.jpg", class_names)
+
+
 if __name__ == '__main__':
     main()

@@ -117,6 +117,15 @@ python rekomendacje.py "Paweł Czapiewski" films_ratings.json --method euclidean
 # Zjazd 4 | Klasyfikacja
 
 **Folder:** `Zjazd4_Klasyfikacja`
+- [Problem Boston House Price](#problem-boston-house-price)
+  - [Drzewo decyzyjne](#drzewo-decyzyjne)
+  - [SVM (SVC)](#svm-svc)
+- [Problem przewidywania wieku Abalone](#problem-przewidywania-wieku-abalone)
+  - [Drzewo decyzyjne](#drzewo-decyzyjne-1)
+  - [SVM (SVC)](#svm-svc-1)
+- [Bonus](#bonus)
+  - [Drzewo decyzyjne](#wizualizacja-drzewa-decyzyjnego-2)
+  - [SVM (SVC)](#svm)
 
 ## Problem Boston House Price
 Projekt polega na klasyfikacji mieszkań w Bostonie na podstawie cech:
@@ -404,11 +413,13 @@ Dane mogą być podane w postaci:
 # Zjazd 5 | Sieć neuronowa
 
 **Folder:** `Zjazd4_Sieć_Neuronowa`
+- [Problem 2 | Rozpoznawianie zwierząt CIFAR10](#problem-2--rozpoznawianie-zwierząt-cifar10)
+- [Problem 3 | Rozpoznawianie ubrań Fashion-MNIST](#problem-3--rozpoznawianie-ubrań-fashion-mnist)
 
 ## Problem 2 | Rozpoznawianie zwierząt CIFAR10
 **Folder:** `Zjazd4_Sieć_Neuronowa/2`
 
-W tym problemie używamy dataset `CIFAR10`, który zawiera `60000` kolorowych zdjęć i `10` klas, każdy po `6000` obrazków:
+W tym problemie używamy dataset [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html), który zawiera `60000` kolorowych zdjęć i `10` klas, każdy po `6000` obrazków o wielkości `32x32`:
 1. "Samolot", 
 2. "Samochód", 
 3. "Ptak", 
@@ -459,3 +470,59 @@ Wejście
 ![zaba.png](Zjazd5_Siec_Neuronowa/2/zaba.png)
 Wyjście
 ![predict_zaba.png](Zjazd5_Siec_Neuronowa/2/Screenshots/predict_zaba.png)
+
+---
+
+## Problem 3 | Rozpoznawianie ubrań Fashion-MNIST
+**Folder:** `Zjazd4_Sieć_Neuronowa/3`
+
+W tym problemie używamy dataset [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist), który zawiera `60000` czarno-białych zdjęć i `10` klas, każdy po `6000` obrazków o wielkości `28x28`:
+1. "T-shirt/top", 
+2. "Trouser", 
+3. "Pullover", 
+4. "Dress", 
+5. "Coat",
+6. "Sandal", 
+7. "Shirt", 
+8. "Sneaker", 
+9. "Bag", 
+10. "Ankle boot".
+
+Uczymy model rozróżniać powyższe `ubrania`.
+
+Nauczony model zostaje zapisany do pliku `model.keras` by uniknąć ponownego uczenia.
+
+### Przykładowe 10 zdjęć z datasetu Fashion-MNIST
+![WizualizacjaDanych.png](Zjazd5_Siec_Neuronowa/3/Screenshots/WizualizacjaDanych.png)
+
+### Model summary
+![model_summary.png](Zjazd5_Siec_Neuronowa/3/Screenshots/model_summary.png)
+
+### Model evaluate
+![model_evaluate.png](Zjazd5_Siec_Neuronowa/3/Screenshots/model_evaluate.png)
+
+### Przetestowanie modelu zdjęciami ze zbioru testowego
+![Ankle boot_Ankle boot.png](Zjazd5_Siec_Neuronowa/3/Screenshots/Ankle%20boot_Ankle%20boot.png)
+![Pullover_Pullover.png](Zjazd5_Siec_Neuronowa/3/Screenshots/Pullover_Pullover.png)
+![Shirt_Shirt.png](Zjazd5_Siec_Neuronowa/3/Screenshots/Shirt_Shirt.png)
+![Trouser_Trouser.png](Zjazd5_Siec_Neuronowa/3/Screenshots/Trouser_Trouser.png)
+
+### Przetestowanie modelu na podstawie zdjęć zewnętrznych
+Wejście
+![kon.jpg](Zjazd5_Siec_Neuronowa/3/ankle_boot.jpg)
+Wyjście
+![predict_kon.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_ankle_boot.png)
+
+---
+
+Wejście
+![ptak.jpg](Zjazd5_Siec_Neuronowa/3/dress.jpg)
+Wyjście
+![predict_ptak.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_dress.png)
+
+---
+
+Wejście
+![zaba.png](Zjazd5_Siec_Neuronowa/3/tshirt.jpg)
+Wyjście
+![predict_zaba.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_tshirt.png)
