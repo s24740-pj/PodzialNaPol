@@ -508,21 +508,21 @@ Nauczony model zostaje zapisany do pliku `model.keras` by uniknąć ponownego uc
 ![Trouser_Trouser.png](Zjazd5_Siec_Neuronowa/3/Screenshots/Trouser_Trouser.png)
 
 ### Przetestowanie modelu na podstawie zdjęć zewnętrznych
-Wejście
+Wejście\
 ![kon.jpg](Zjazd5_Siec_Neuronowa/3/ankle_boot.jpg)
-Wyjście
+Wyjście\
 ![predict_kon.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_ankle_boot.png)
 
 ---
 
-Wejście
+Wejście\
 ![ptak.jpg](Zjazd5_Siec_Neuronowa/3/dress.jpg)
-Wyjście
+Wyjście\
 ![predict_ptak.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_dress.png)
 
 ---
 
-Wejście
+Wejście\
 ![zaba.png](Zjazd5_Siec_Neuronowa/3/tshirt.jpg)
-Wyjście
+Wyjście\
 ![predict_zaba.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_tshirt.png)
