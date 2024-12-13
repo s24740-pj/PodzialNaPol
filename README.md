@@ -427,7 +427,7 @@ neuronowej oraz jej porównanie z dokładnością drzewa decyzyjnego i modelu SV
 ### Wizualizacja sieci neuronowej
 ![neural_network_plot_boston_house_price.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price.png)
 
-### Dokładność sieci neuronowej i przykładowe użycie
+### Dokładność sieci neuronowej
 ![neural_network_terminal_boston_house_price_accuracy.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_terminal_boston_house_price_accuracy.png)
 
 ### Przykładowe użycie na danych testowych
