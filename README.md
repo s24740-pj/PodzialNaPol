@@ -412,12 +412,29 @@ Dane mogą być podane w postaci:
 
 # Zjazd 5 | Sieć neuronowa
 
-**Folder:** `Zjazd4_Sieć_Neuronowa`
+**Folder:** `Zjazd5_Sieć_Neuronowa`
+- [Problem 1 | Sieć Neuronowa](#problem-1--sieć-neuronowa)
 - [Problem 2 | Rozpoznawianie zwierząt CIFAR10](#problem-2--rozpoznawianie-zwierząt-cifar10)
 - [Problem 3 | Rozpoznawianie ubrań Fashion-MNIST](#problem-3--rozpoznawianie-ubrań-fashion-mnist)
 
+## Problem 1 | Sieć Neuronowa
+**Folder:** `Zjazd5_Sieć_Neuronowa/1`
+
+Skrypt implementuje klasyfikację cen mieszkań w Bostonie na podstawie różnych cech, takich jak liczba pokoi, wskaźnik przestępczości itp.
+Dane są przetwarzane, normalizowane, a następnie klasyfikowane przy użyciu sieci neuronowej. Na końcu wyświetlana jest dokładność sieci
+neuronowej oraz jej porównanie z dokładnością drzewa decyzyjnego i modelu SVM.
+
+### Wizualizacja sieci neuronowej
+![neural_network_plot_boston_house_price.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price.png)
+
+### Dokładność sieci neuronowej i przykładowe użycie
+![neural_network_terminal_boston_house_price_accuracy.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_terminal_boston_house_price_accuracy.png)
+
+### Przykładowe użycie na danych testowych
+![neural_network_terminal_boston_house_price_sample.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_terminal_boston_house_price_sample.png)
+
 ## Problem 2 | Rozpoznawianie zwierząt CIFAR10
-**Folder:** `Zjazd4_Sieć_Neuronowa/2`
+**Folder:** `Zjazd5_Sieć_Neuronowa/2`
 
 W tym problemie używamy dataset [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html), który zawiera `60000` kolorowych zdjęć i `10` klas, każdy po `6000` obrazków o wielkości `32x32`:
 1. "Samolot", 
@@ -474,7 +491,7 @@ Wyjście
 ---
 
 ## Problem 3 | Rozpoznawianie ubrań Fashion-MNIST
-**Folder:** `Zjazd4_Sieć_Neuronowa/3`
+**Folder:** `Zjazd5_Sieć_Neuronowa/3`
 
 W tym problemie używamy dataset [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist), który zawiera `60000` czarno-białych zdjęć i `10` klas, każdy po `6000` obrazków o wielkości `28x28`:
 1. "T-shirt/top", 
