@@ -230,7 +230,7 @@ Rozwinięcie skrótów:
     0: Mężczyzna\
     1: Kobieta\
     2: Inna
-4. `PREFERRED_GENRE`: Jaki gatunek gier preferujesz?\
+3. `PREFERRED_GENRE`: Jaki gatunek gier preferujesz?\
     0: Strzelanki\
     1: Battle Royale\
     2: Gry RPG; Souls Like\
@@ -239,39 +239,39 @@ Rozwinięcie skrótów:
     5: Gry logiczne\
     6: Gry przygodowe\
     7: Inne
-5. `USE_MODS`: Czy używasz modów do gier?\
+4. `USE_MODS`: Czy używasz modów do gier?\
     0: Tak, często\
     1: Okazjonalnie\
     2: Nie
-6. `DEVICE`: Na jakim sprzęcie grasz najczęściej?\
+5. `DEVICE`: Na jakim sprzęcie grasz najczęściej?\
     0: PC\
     1: Konsola (PS/Xbox)\
     2: Mobilne urządzenia\
     3: Inne
-7. `DEVICES_COUNT`: Z ilu sprzętów korzystasz do grania? (Podaj ilość)\
+6. `DEVICES_COUNT`: Z ilu sprzętów korzystasz do grania? (Podaj ilość)\
     [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
-8. `PLATFORM`: Na jakiej platformie grasz najczęściej?\
+7. `PLATFORM`: Na jakiej platformie grasz najczęściej?\
     0: Steam\
     1: Origin\
     2: Epic Games\
     3: Inne
-9. `PLAY_TIME`: Ile czasu dziennie średnio spędzasz na grach (Podaj w godzinach)?\
+8. `PLAY_TIME`: Ile czasu dziennie średnio spędzasz na grach (Podaj w godzinach)?\
     [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
-10. `PLAY_TIME_OF_DAY`: O jakiej porze dnia preferujesz granie?\
+9. `PLAY_TIME_OF_DAY`: O jakiej porze dnia preferujesz granie?\
     0: Rano\
     1: Po południe\
     2: Wieczór\
     3: Późna noc
-11. `GAME_MODE`: Jaki tryb gry preferujesz?\
+10. `GAME_MODE`: Jaki tryb gry preferujesz?\
     0: Gra lokalna (Singleplayer)\
     1: Gra online (Multiplayer)
-12. `VOICE_CHAT_START`: Kiedy zacząłeś/aś używać czatu głosowego w grach komputerowych?\
+11. `VOICE_CHAT_START`: Kiedy zacząłeś/aś używać czatu głosowego w grach komputerowych?\
     0: Nigdy\
     1: Przed 2000\
     2: 2000–2010\
     3: 2010–2020\
     4: Po 2020
-13. `FAV_GAME`: Jaką gre lubisz najbardziej? (Wybierz jedną)\
+12. `FAV_GAME`: Jaką gre lubisz najbardziej? (Wybierz jedną)\
     0: Counter Strike (2, Global Offensive)\
     1: Valorant\
     2: Fortnite\
@@ -286,7 +286,7 @@ Rozwinięcie skrótów:
     11: Zelda\
     12: Pokémon\
     13: Inna
-14. `VISUAL_IMPACT`: Która z poniższych gier wywarła na Tobie największe wrażenie wizualne? (Wybierz jedną)\
+13. `VISUAL_IMPACT`: Która z poniższych gier wywarła na Tobie największe wrażenie wizualne? (Wybierz jedną)\
     0: Mario\
     1: The Legend of Zelda: Breath of the Wild\
     2: Final Fantasy\
@@ -298,22 +298,22 @@ Rozwinięcie skrótów:
     8: Cyberpunk 2077\
     9: GTA 5\
     10: Inne
-15. `COMM_METHOD`: W jakiej formie najczęściej komunikujesz się z innymi podczas grania?\
+14. `COMM_METHOD`: W jakiej formie najczęściej komunikujesz się z innymi podczas grania?\
     0: Discord\
     1: TeamSpeak\
     2: Inne
-16. `GAME_SKILLS`: Jak oceniasz swoje umiejętności w grach komputerowych?\
+15. `GAME_SKILLS`: Jak oceniasz swoje umiejętności w grach komputerowych?\
     0: Bardzo zaawansowane\
     1: Średnio zaawansowane\
     2: Podstawowe\
     3: Brak umiejętności
-17. `FOLLOW_ESPORTS`: Czy śledzisz esport lub zawody gamingowe?\
+16. `FOLLOW_ESPORTS`: Czy śledzisz esport lub zawody gamingowe?\
     0: Tak, regularnie\
     1: Tak, sporadycznie\
     2: Nie, nie interesuje mnie to
-18. `NOSTALGIC_GAMES`: W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)\
+17. `NOSTALGIC_GAMES`: W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)\
     [Integer]
-19. `FIRST_DEVICE`: Jaki był twój pierwszy sprzęt, na którym zagrałeś/aś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).\
+18. `FIRST_DEVICE`: Jaki był twój pierwszy sprzęt, na którym zagrałeś/aś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).\
     0: Atari\
     1: NES/SNES\
     2: PlayStation 1/2\
@@ -324,13 +324,13 @@ Rozwinięcie skrótów:
     7: PC (po 2005 roku)\
     8: Smartfon/Telefon (przed 2005 rokiem)\
     9: Smartfon/Telefon (po 2005 roku)
-20. `ICONIC_MOMENTS`: Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?\
+19. `ICONIC_MOMENTS`: Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?\
     0: Premiera Pokémon Red/Blue\
     1: Hype wokół gier w czasach ery Y2K\
     2: Premiera Halo 3\
     3: Szał na Minecrafta w latach 2010\
     4: Fortnite World Cup
-21. `GAME_SOUNDS`: Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?\
+20. `GAME_SOUNDS`: Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?\
     0: Dźwięk zbierania monety z Mario\
     1: Motyw przewodni z "The Legend of Zelda"\
     2: Intro z "Halo"\
@@ -416,18 +416,33 @@ Dane mogą być podane w postaci:
 - [Problem 1 | Sieć Neuronowa](#problem-1--sieć-neuronowa)
 - [Problem 2 | Rozpoznawianie zwierząt CIFAR10](#problem-2--rozpoznawianie-zwierząt-cifar10)
 - [Problem 3 | Rozpoznawianie ubrań Fashion-MNIST](#problem-3--rozpoznawianie-ubrań-fashion-mnist)
+- [Problem 4 | Sieć Neuronowa dla ankiety graczy](#problem-4--sieć-neuronowa-dla-ankiety-graczy)
 
 ## Problem 1 | Sieć Neuronowa
 **Folder:** `Zjazd5_Sieć_Neuronowa/1`
 
-Skrypt implementuje klasyfikację cen mieszkań w Bostonie na podstawie różnych cech, takich jak liczba pokoi, wskaźnik przestępczości itp.
-Dane są przetwarzane, normalizowane, a następnie klasyfikowane przy użyciu sieci neuronowej. Na końcu wyświetlana jest dokładność sieci
-neuronowej oraz jej porównanie z dokładnością drzewa decyzyjnego i modelu SVM.
+Skrypt implementuje klasyfikację cen mieszkań w Bostonie na podstawie różnych cech, takich jak liczba pokoi, wskaźnik przestępczości, itp.
+Zawiera proces ładowania, przetwarzania, standaryzowania danych, oraz budowy i treningu dwóch modeli sieci neuronowych: małej i dużej sieci. 
+Modele są oceniane na podstawie dokładności i straty na zbiorze testowym. 
+Wyniki są porównywane z dokładnością modeli drzewa decyzyjnego oraz SVM.
+Dodatkowo wyświetlane są:
+    - Macierze pomyłek dla obu modeli sieci neuronowych,
+    - Wizualizacje procesu treningu (strata i dokładność),
+    - Klasyfikacja próbek danych testowych przez oba modele.
 
-### Wizualizacja sieci neuronowej
-![neural_network_plot_boston_house_price.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price.png)
+### Wizualizacja sieci neuronowej small and large
+`SMALL`
+![neural_network_plot_boston_house_price_small_neural.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price_small_neural.png)
+`LARGE`
+![neural_network_plot_boston_house_price_large_neural.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price_large_neural.png)
 
-### Dokładność sieci neuronowej
+### Wizualizacja confusion matrix small and large
+`SMALL`
+![neural_network_plot_boston_house_price_small_confusion_matrix.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price_small_confusion_matrix.png)
+`LARGE`
+![neural_network_plot_boston_house_price_large_confusion_matrix.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_plot_boston_house_price_large_confusion_matrix.png)
+
+### Dokładność sieci neuronowej small and large
 ![neural_network_terminal_boston_house_price_accuracy.png](Zjazd5_Siec_Neuronowa/1/Screenshots/neural_network_terminal_boston_house_price_accuracy.png)
 
 ### Przykładowe użycie na danych testowych
@@ -543,3 +558,148 @@ Wejście\
 ![zaba.png](Zjazd5_Siec_Neuronowa/3/tshirt.jpg)
 Wyjście\
 ![predict_zaba.png](Zjazd5_Siec_Neuronowa/3/Screenshots/predict_tshirt.png)
+
+## Problem 4 | Sieć Neuronowa dla ankiety graczy
+**Folder:** `Zjazd5_Sieć_Neuronowa/4`
+
+Stworzyliśmy ankietę wsród graczy.\
+Link do ankiety: [Ankieta](https://forms.gle/VGM7HoqHYkRwqTNn9) \
+Projekt dotyczy stworzenia modelu sieci neuronowej, który na podstawie danych z ankiety przewiduje,
+czy dana osoba jest pełnoletnia. Zebrano odpowiedzi od 120 uczestników, z czego połowa to osoby pełnoletnie,
+a połowa niepełnoletnie. Proces obejmuje przygotowanie danych, skalowanie cech, budowę i trening modelu w TensorFlow
+oraz wizualizację wyników. Wykorzystano dane dotyczące preferencji i zachowań graczy, przy czym założono,
+że wszystkie odpowiedzi zostały podane rzetelnie.
+
+Rozwinięcie skrótów:
+1. `AGE`: Ile masz lat? (Podaj wiek)\
+    [Integer]
+2. `SEX`: Jaka jest Twoja płeć?\ 
+    0: Mężczyzna\
+    1: Kobieta\
+    2: Inna
+3. `PREFERRED_GENRE`: Jaki gatunek gier preferujesz?\
+    0: Strzelanki\
+    1: Battle Royale\
+    2: Gry RPG; Souls Like\
+    3: Gry strategiczne\
+    4: Symulatory\
+    5: Gry logiczne\
+    6: Gry przygodowe\
+    7: Inne
+4. `USE_MODS`: Czy używasz modów do gier?\
+    0: Tak, często\
+    1: Okazjonalnie\
+    2: Nie
+5. `DEVICE`: Na jakim sprzęcie grasz najczęściej?\
+    0: PC\
+    1: Konsola (PS/Xbox)\
+    2: Mobilne urządzenia\
+    3: Inne
+6. `DEVICES_COUNT`: Z ilu sprzętów korzystasz do grania? (Podaj ilość)\
+    [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
+7. `PLATFORM`: Na jakiej platformie grasz najczęściej?\
+    0: Steam\
+    1: Origin\
+    2: Epic Games\
+    3: Inne
+8. `PLAY_TIME`: Ile czasu dziennie średnio spędzasz na grach (Podaj w godzinach)?\
+    [Integer] Przedział od 0 do 10, gdzie 10 to 10 lub więcej.
+9. `PLAY_TIME_OF_DAY`: O jakiej porze dnia preferujesz granie?\
+    0: Rano\
+    1: Po południe\
+    2: Wieczór\
+    3: Późna noc
+10. `GAME_MODE`: Jaki tryb gry preferujesz?\
+    0: Gra lokalna (Singleplayer)\
+    1: Gra online (Multiplayer)
+11. `VOICE_CHAT_START`: Kiedy zacząłeś/aś używać czatu głosowego w grach komputerowych?\
+    0: Nigdy\
+    1: Przed 2000\
+    2: 2000–2010\
+    3: 2010–2020\
+    4: Po 2020
+12. `FAV_GAME`: Jaką gre lubisz najbardziej? (Wybierz jedną)\
+    0: Counter Strike (2, Global Offensive)\
+    1: Valorant\
+    2: Fortnite\
+    3: Minecraft\
+    4: League of Legends\
+    5: The Sims 4\
+    6: FIFA (np. FIFA 24)\
+    7: Call of Duty\
+    8: Roblox\
+    9: GTA V\
+    10: Mario\
+    11: Zelda\
+    12: Pokémon\
+    13: Inna
+13. `VISUAL_IMPACT`: Która z poniższych gier wywarła na Tobie największe wrażenie wizualne? (Wybierz jedną)\
+    0: Mario\
+    1: The Legend of Zelda: Breath of the Wild\
+    2: Final Fantasy\
+    3: Half-Life 2\
+    4: Vrchat\
+    5: Fortnite\
+    6: The Witcher 3: Wild Hunt\
+    7: Horizon Zero Dawn\
+    8: Cyberpunk 2077\
+    9: GTA 5\
+    10: Inne
+14. `COMM_METHOD`: W jakiej formie najczęściej komunikujesz się z innymi podczas grania?\
+    0: Discord\
+    1: TeamSpeak\
+    2: Inne
+15. `GAME_SKILLS`: Jak oceniasz swoje umiejętności w grach komputerowych?\
+    0: Bardzo zaawansowane\
+    1: Średnio zaawansowane\
+    2: Podstawowe\
+    3: Brak umiejętności
+16. `FOLLOW_ESPORTS`: Czy śledzisz esport lub zawody gamingowe?\
+    0: Tak, regularnie\
+    1: Tak, sporadycznie\
+    2: Nie, nie interesuje mnie to
+17. `NOSTALGIC_GAMES`: W skali od 0-10 jak bardzo lubisz gry nostalgiczne/stare (np. Quake, Diablo 1, Tetris, Mario, itp.)\
+    [Integer]
+18. `FIRST_DEVICE`: Jaki był twój pierwszy sprzęt, na którym zagrałeś/aś swoją pierwszą grę (Jeżeli nie dokładnie to bardzo podobny).\
+    0: Atari\
+    1: NES/SNES\
+    2: PlayStation 1/2\
+    3: Xbox (Original/360)\
+    4: Game Boy/DS\
+    5: Współczesna konsola (PS4/PS5, Xbox One/Series, itp.)\
+    6: PC (przed 2005 rokiem)\
+    7: PC (po 2005 roku)\
+    8: Smartfon/Telefon (przed 2005 rokiem)\
+    9: Smartfon/Telefon (po 2005 roku)
+19. `ICONIC_MOMENTS`: Które z tych kultowych momentów związanych z grami pamiętasz, jako najstarsze?\
+    0: Premiera Pokémon Red/Blue\
+    1: Hype wokół gier w czasach ery Y2K\
+    2: Premiera Halo 3\
+    3: Szał na Minecrafta w latach 2010\
+    4: Fortnite World Cup
+20. `GAME_SOUNDS`: Który z tych dźwięków lub utworów z gier najbardziej utkwił Ci w pamięci?\
+    0: Dźwięk zbierania monety z Mario\
+    1: Motyw przewodni z "The Legend of Zelda"\
+    2: Intro z "Halo"\
+    3: Motyw przewodni z "Tetrisa"\
+    4: „Still Alive” z "Portal"\
+    5: Dźwięk Creepera z "Minecraft"\
+    6: Dźwięk z "Roblox" "Death Sound"\
+    7: Motyw przewodni z "The Elder Scrolls V: Skyrim" (Dragonborn)\
+    8: „Megalovania” z "Undertale"\
+    9: Dźwięk piosenki Victory Royale z "Fortnite"\
+    10: Motyw przewodni z "The Last of Us" (melancholijna gitara)\
+    11: Muzyka z lobby CSGO
+
+W samym projekcie przetestowaliśmy różne rodzaje danych, które będą miały dobrą korelację między sobą.
+Prawidłowy dobór danych jest na tyle istotny, że znacząco wpływa na dokładność modeli.
+Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia.
+
+### Wizualizacja sieci neuronowej
+![neural_network_plot_gamingDataset.png](Zjazd5_Siec_Neuronowa/4/Screenshots/neural_network_plot_gamingDataset.png)
+
+### Dokładność sieci neuronowej
+![neural_network_terminal_gamingDataset_accuracy.png](Zjazd5_Siec_Neuronowa/4/Screenshots/neural_network_terminal_gamingDataset_accuracy.png)
+
+### Przykładowe użycie na danych testowych
+![neural_network_terminal_gamingDataset_sample.png](Zjazd5_Siec_Neuronowa/4/Screenshots/neural_network_terminal_gamingDataset_sample.png)
