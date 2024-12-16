@@ -4,6 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+
 """
     Autorzy:
         Kamil Powierza
@@ -16,16 +19,18 @@ import matplotlib.pyplot as plt
         4. sklearn.preprocessing
         5. tensorflow
         6. matplotlib.pyplot
+        7. seaborn
+        8. sklearn.metrics
 
     Opis:
-        Skrypt implementuje klasyfikację cen mieszkań w Bostonie na podstawie różnych cech, takich jak liczba pokoi, wskaźnik przestępczości itp.
-        Dane są przetwarzane, normalizowane, a następnie klasyfikowane przy użyciu sieci neuronowej. Na końcu wyświetlana jest dokładność sieci
-        neuronowej oraz jej porównanie z dokładnością drzewa decyzyjnego i modelu SVM.
-
-    Instrukcja użycia:
-        1. Upewnij się, że plik "housing.data.txt" jest w odpowiednim miejscu.
-        2. Uruchom kod, aby załadować dane, nauczyć sieć neuronową klasyfikować dane i zobaczyć wyniki.
-        3. Porównać wyniki modelu sieci neuronowej, drzewa decyzyjnego, SVM.
+        Skrypt implementuje klasyfikację cen mieszkań w Bostonie na podstawie różnych cech, takich jak liczba pokoi, wskaźnik przestępczości, itp.
+        Zawiera proces ładowania, przetwarzania, standaryzowania danych, oraz budowy i treningu dwóch modeli sieci neuronowych: małej i dużej sieci. 
+        Modele są oceniane na podstawie dokładności i straty na zbiorze testowym. 
+        Wyniki są porównywane z dokładnością modeli drzewa decyzyjnego oraz SVM.
+        Dodatkowo wyświetlane są:
+        - Macierze pomyłek dla obu modeli sieci neuronowych,
+        - Wizualizacje procesu treningu (strata i dokładność),
+        - Klasyfikacja próbek danych testowych przez oba modele.
 """
 
 
@@ -33,11 +38,11 @@ def load_and_prepare_data(filepath):
     """
         Ładuje dane z pliku, przygotowuje je do klasyfikacji i dzieli na zbiory treningowy oraz testowy.
 
-        Args:
-            filepath (str): Ścieżka do pliku z danymi.
+        Parametry:
+            filepath (str): Ścieżka do pliku z danymi wejściowymi.
 
-        Returns:
-            tuple: Zbiory treningowe i testowe (X_train, X_test, y_train, y_test).
+        Zwraca:
+            tuple: Zbiór danych treningowych (X_train, y_train) i testowych (X_test, y_test).
     """
     column_names = [
         "CRIM", "ZN", "INDUS", "CHAS", "NOX", "RM", "AGE", "DIS", "RAD", "TAX", "PTRATIO", "B", "LSTAT", "PRICE"
@@ -57,12 +62,12 @@ def scale_data(X_train, X_test):
     """
         Skaluje dane wejściowe do standaryzowanej postaci.
 
-        Args:
-            X_train (numpy.ndarray): Dane treningowe.
-            X_test (numpy.ndarray): Dane testowe.
+        Parametry:
+            X_train (DataFrame): Dane treningowe.
+            X_test (DataFrame): Dane testowe.
 
-        Returns:
-            tuple: Skalowane dane treningowe i testowe (X_train_scaled, X_test_scaled).
+        Zwraca:
+            tuple: Zbiór danych treningowych i testowych po skalowaniu (X_train_scaled, X_test_scaled).
     """
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
@@ -71,23 +76,24 @@ def scale_data(X_train, X_test):
     return X_train_scaled, X_test_scaled
 
 
-def build_model(input_shape):
+def build_model(input_shape, layers=[32, 16, 8]):
     """
         Tworzy i kompiluje model sieci neuronowej do klasyfikacji.
 
-        Args:
-            input_shape (int): Liczba cech wejściowych.
+        Parametry:
+            input_shape (int): Liczba cech wejściowych (rozmiar wejścia).
+            layers (list): Lista liczby neuronów w poszczególnych warstwach ukrytych.
 
-        Returns:
-            tf.keras.Model: Skompilowany model sieci neuronowej.
+        Zwraca:
+            model (tf.keras.Sequential): Skonstruowany model sieci neuronowej.
     """
-    model = tf.keras.Sequential([
-        tf.keras.layers.InputLayer(input_shape=(input_shape,)),
-        tf.keras.layers.Dense(32, activation='relu'),
-        tf.keras.layers.Dense(16, activation='relu'),
-        tf.keras.layers.Dense(8, activation='relu'),
-        tf.keras.layers.Dense(1, activation='sigmoid')
-    ])
+    model = tf.keras.Sequential()
+    model.add(tf.keras.layers.InputLayer(input_shape=(input_shape,)))
+
+    for units in layers:
+        model.add(tf.keras.layers.Dense(units, activation='relu'))
+
+    model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
     return model
@@ -97,8 +103,11 @@ def plot_training_history(history):
     """
         Wizualizuje historię treningu modelu, pokazując stratę i dokładność na danych treningowych i walidacyjnych.
 
-        Args:
-            history (tf.keras.callbacks.History): Historia treningu modelu.
+        Parametry:
+            history (History): Historia treningu modelu (obiekt zwrócony przez fit).
+
+        Zwraca:
+            None
     """
     plt.figure(figsize=(12, 6))
 
@@ -122,13 +131,36 @@ def plot_training_history(history):
     plt.show()
 
 
+def plot_confusion_matrix(y_true, y_pred):
+    """
+        Rysuje macierz pomyłek na podstawie rzeczywistych i przewidywanych etykiet.
+
+        Parametry:
+            y_true (array-like): Rzeczywiste etykiety (wartości docelowe).
+            y_pred (array-like): Przewidywane etykiety.
+
+        Zwraca:
+            None
+    """
+    cm = confusion_matrix(y_true, y_pred)
+    plt.figure(figsize=(6, 5))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["Niska", "Wysoka"], yticklabels=["Niska", "Wysoka"])
+    plt.xlabel('Przewidywana')
+    plt.ylabel('Rzeczywista')
+    plt.title('Macierz pomyłek')
+    plt.show()
+
+
 def classify_samples(model, X_test):
     """
         Klasyfikuje przykładowe dane testowe i wyświetla wyniki.
 
-        Args:
-            model (tf.keras.Model): Wytrenowany model.
-            X_test (numpy.ndarray): Dane testowe.
+        Parametry:
+            model (tf.keras.Model): Wytrenowany model sieci neuronowej.
+            X_test (DataFrame): Zbiór danych testowych do klasyfikacji.
+
+        Zwraca:
+            None
     """
     sample_data = X_test[:3]
     sample_predictions = model.predict(sample_data)
@@ -142,15 +174,16 @@ def classify_samples(model, X_test):
 def main():
     """
         Główna funkcja programu: ładuje dane, trenuje model, ocenia go oraz porównuje z innymi metodami klasyfikacji.
-
-        Sekcje funkcji:
-            1. Ładowanie danych: Przygotowanie zbioru danych do modelowania.
-            2. Skalowanie danych: Normalizacja cech wejściowych.
-            3. Budowa i trening modelu: Tworzenie i trenowanie sieci neuronowej.
-            4. Ocena modelu: Obliczanie strat i dokładności na zbiorze testowym.
-            5. Porównanie metod: Analiza wyników sieci neuronowej względem drzewa decyzyjnego i SVM.
-            6. Wizualizacja: Rysowanie wykresu historii treningu.
-            7. Klasyfikacja próbek: Testowanie modelu na przykładach.
+        Sekcje w funkcji:
+        1. Ładowanie danych
+        2. Skalowanie danych
+        3. Budowa i trening modelu (mała sieć neuronowa)
+        4. Budowa i trening modelu (duża sieć neuronowa)
+        5. Ocena modeli
+        6. Porównanie wyników z innymi metodami klasyfikacji (drzewo decyzyjne, SVM)
+        7. Wizualizacja wyników treningu
+        8. Ocena wyników przy użyciu macierzy pomyłek
+        9. Klasyfikacja próbek testowych
     """
     # Sekcja 1: Ładowanie danych
     filepath = "housing.data.txt"
@@ -159,38 +192,65 @@ def main():
     # Sekcja 2: Skalowanie danych
     X_train, X_test = scale_data(X_train, X_test)
 
-    # Sekcja 3: Budowa i trening modelu
-    model = build_model(X_train.shape[1])
-    history = model.fit(X_train, y_train, validation_split=0.2, epochs=50, batch_size=32, verbose=1)
+    # Sekcja 3: Budowa i trening modelu (mała sieć neuronowa)
+    model_small = build_model(X_train.shape[1], layers=[16, 8])
+    history_small = model_small.fit(X_train, y_train, validation_split=0.2, epochs=50, batch_size=32, verbose=1)
 
-    # Sekcja 4: Ocena modelu
-    loss, accuracy = model.evaluate(X_test, y_test)
-    print("=== Wyniki sieci neuronowej ===")
-    print(f"Dokładność na zbiorze testowym: {accuracy:.2f}")
-    print(f"Strata na zbiorze testowym: {loss:.2f}")
+    # Sekcja 4: Budowa i trening modelu (duża sieć neuronowa)
+    model_large = build_model(X_train.shape[1], layers=[64, 32, 16])
+    history_large = model_large.fit(X_train, y_train, validation_split=0.2, epochs=50, batch_size=32, verbose=1)
 
-    # Sekcja 5: Porównanie metod
+    # Sekcja 5: Ocena modeli
+    loss_small, accuracy_small = model_small.evaluate(X_test, y_test)
+    loss_large, accuracy_large = model_large.evaluate(X_test, y_test)
+
+    print("=== Wyniki modelu z małą siecią neuronową ===")
+    print(f"Dokładność na zbiorze testowym: {accuracy_small:.2f}")
+    print(f"Strata na zbiorze testowym: {loss_small:.2f}")
+
+    print("=== Wyniki modelu z dużą siecią neuronową ===")
+    print(f"Dokładność na zbiorze testowym: {accuracy_large:.2f}")
+    print(f"Strata na zbiorze testowym: {loss_large:.2f}")
+
+    # Sekcja 6: Porównanie wyników z innymi metodami klasyfikacji (drzewo decyzyjne, SVM)
     decision_tree_accuracy = 0.81
     decision_SVM_accuracy = 0.84
     print(f"Dokładność drzewa decyzyjnego: {decision_tree_accuracy:.2f}")
     print(f"Dokładność modelu SVM: {decision_SVM_accuracy:.2f}")
 
-    if accuracy > decision_tree_accuracy and accuracy > decision_SVM_accuracy:
-        print(f"Najdokładniejsza jest sieć neuronowa: {accuracy:.2f}")
-    elif decision_tree_accuracy > accuracy and decision_tree_accuracy > decision_SVM_accuracy:
-        print(f"Najdokładniejsze jest drzewo decyzyjne: {decision_tree_accuracy:.2f}")
+    if accuracy_small > accuracy_large and accuracy_small > decision_tree_accuracy and accuracy_small > decision_SVM_accuracy:
+        print(f"Największa dokładność to {accuracy_small:.2f}, uzyskana przez model: Mała sieć neuronowa")
+    elif accuracy_large > accuracy_small and accuracy_large > decision_tree_accuracy and accuracy_large > decision_SVM_accuracy:
+        print(f"Największa dokładność to {accuracy_large:.2f}, uzyskana przez model: Duża sieć neuronowa")
+    elif decision_tree_accuracy > accuracy_small and decision_tree_accuracy > accuracy_large and decision_tree_accuracy > decision_SVM_accuracy:
+        print(f"Największa dokładność to {decision_tree_accuracy:.2f}, uzyskana przez model: Drzewo decyzyjne")
     else:
-        print(f"Najdokładniejszy jest model SVM: {decision_SVM_accuracy:.2f}")
+        print(f"Największa dokładność to {decision_SVM_accuracy:.2f}, uzyskana przez model: SVM")
 
-    # Sekcja 6: Wizualizacja
-    plot_training_history(history)
+    # Sekcja 7: Wizualizacja wyników treningu
+    plot_training_history(history_small)
+    plot_training_history(history_large)
 
-    # Sekcja 7: Klasyfikacja próbek
-    classify_samples(model, X_test)
+    # Sekcja 8: Ocena wyników przy użyciu macierzy pomyłek
+    y_pred_small = (model_small.predict(X_test) > 0.5).astype(int)
+    y_pred_large = (model_large.predict(X_test) > 0.5).astype(int)
+
+    print("Macierz pomyłek dla małej sieci neuronowej:")
+    plot_confusion_matrix(y_test, y_pred_small)
+
+    print("Macierz pomyłek dla dużej sieci neuronowej:")
+    plot_confusion_matrix(y_test, y_pred_large)
+
+    # Sekcja 9: Klasyfikacja próbek testowych
+    print("Przykładowe dane testowe dla małej sieci:")
+    classify_samples(model_small, X_test)
+    print("\nPrzykładowe dane testowe dla dużej sieci:")
+    classify_samples(model_large, X_test)
 
 
 if __name__ == "__main__":
     """
-        Uruchamia główną funkcję programu.
+        Description:
+            Uruchomienie głównej funkcji main.
     """
     main()
