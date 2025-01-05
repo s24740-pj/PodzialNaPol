@@ -4,6 +4,7 @@
 - [Zjazd 3 | Clustering: Rekomendacja filmow](#zjazd-3--clustering-rekomendacja-filmow)
 - [Zjazd 4 | Klasyfikacja](#zjazd-4--klasyfikacja)
 - [Zjazd 5 | Sieć neuronowa](#zjazd-5--sieć-neuronowa)
+- [Zjazd 6 | ComputerVision](#zjazd-6--computervision)
 
 ---
 
@@ -703,3 +704,28 @@ Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia.
 
 ### Przykładowe użycie na danych testowych
 ![neural_network_terminal_gamingDataset_sample.png](Zjazd5_Siec_Neuronowa/4/Screenshots/neural_network_terminal_gamingDataset_sample.png)
+
+---
+
+# Zjazd 6 | ComputerVision
+
+**Folder:** `Zjazd6_ComputerVision`
+- [Zadanie 2 | Celowanie w zielone](#zadanie-2--celowanie-w-zielone)
+
+
+## Zadanie 2 | Celowanie w zielone
+
+**Plik:** `Zjazd6_ComputerVision/2.py`
+
+## Opis zadania
+W tym zadaniu stworzyliśmy program do wykrywania kolorów zielonego i czerwonego w czasie rzeczywistym za pomocą kamery i biblioteki OpenCV.
+Obraz wideo został konwertowany z przestrzeni BGR do HSV, co umożliwiło precyzyjne określenie zakresów kolorów i stworzenie odpowiednich masek.
+Zielone obiekty zostały wykryte na podstawie konturów, a następnie oznaczone celownikiem oraz komunikatem "Zielony - Strzelam!", podczas gdy obecność czerwonych pikseli powodowała wyświetlenie tekstu "Czerwony - Nie strzelam!".
+Program kończy swoje działanie po naciśnięciu klawisza ESC, a jego funkcjonalność opiera się na technikach przetwarzania obrazu i analizy koloru.
+
+## Wymagane biblioteki
+1. OpenCV
+2. numpy
+
+### Demo
+[![Celowanie w zielone demo | OpenCV](https://img.youtube.com/vi/u2p2zcWjAbc/maxresdefault.jpg)](https://www.youtube.com/watch?v=u2p2zcWjAbc)
