@@ -719,6 +719,7 @@ Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia.
 
 ## Opis zadania
 Program wykorzystuje biblioteki MediaPipe i OpenCV do detekcji twarzy i rąk w czasie rzeczywistym na podstawie obrazu z kamery.
+
 Implementacja obejmuje rozpoznawanie ruchu oraz analizę pozycji rąk względem twarzy. W zależności od wykrytych ruchów i gestów, program generuje następujące reakcje:
     - Rysowanie celownika na twarzy: Celownik jest rysowany, gdy ręce są opuszczone, a wykryty zostaje ruch.
     - Wyświetlanie komunikatu "Poddanie się!": Wyświetla się, gdy wykryte zostaną podniesione ręce (nad linią twarzy).
