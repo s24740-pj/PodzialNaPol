@@ -710,8 +710,25 @@ Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia.
 # Zjazd 6 | ComputerVision
 
 **Folder:** `Zjazd6_ComputerVision`
+- [Zadanie 1,3,4 | Narysowanie celownika, Wycelowanie w cele ktore sie ruszaja, Tryb poddania sie](#zadanie-134--narysowanie-celownika-wycelowanie-w-cele-ktore-sie-ruszaja-tryb-poddania-sie)
 - [Zadanie 2 | Celowanie w zielone](#zadanie-2--celowanie-w-zielone)
 
+## Zadanie 1,3,4 | Narysowanie celownika, Wycelowanie w cele ktore sie ruszaja, Tryb poddania sie
+
+**Plik:** `Zjazd6_ComputerVision/1.py`
+
+## Opis zadania
+Program wykorzystuje biblioteki MediaPipe i OpenCV do detekcji twarzy i rąk w czasie rzeczywistym na podstawie obrazu z kamery.
+Implementacja obejmuje rozpoznawanie ruchu oraz analizę pozycji rąk względem twarzy. W zależności od wykrytych ruchów i gestów, program generuje następujące reakcje:
+    - Rysowanie celownika na twarzy: Celownik jest rysowany, gdy ręce są opuszczone, a wykryty zostaje ruch.
+    - Wyświetlanie komunikatu "Poddanie się!": Wyświetla się, gdy wykryte zostaną podniesione ręce (nad linią twarzy).
+
+## Wymagane biblioteki
+1. cv2
+2. mediapipe
+
+## Nagranie animacji
+![Video of ComputerVision](Zjazd6_ComputerVision/Video/celownik_ruch_poddanie.mp4)
 
 ## Zadanie 2 | Celowanie w zielone
 
