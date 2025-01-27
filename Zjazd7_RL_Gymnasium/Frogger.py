@@ -56,7 +56,7 @@ train_env = VecFrameStack(train_env, n_stack=4)
     Returns:
         model (DQN): Zainicjalizowany model DQN.
 """
-model = DQN("CnnPolicy", train_env, verbose=1, learning_rate=1e-4, buffer_size=20000,
+model = DQN("CnnPolicy", train_env, verbose=1, learning_rate=0.0001, buffer_size=20000,
             exploration_fraction=0.1, exploration_final_eps=0.02, target_update_interval=500,
             tensorboard_log="frogger_dqn")
 
