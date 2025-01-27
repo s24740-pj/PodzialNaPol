@@ -5,6 +5,7 @@
 - [Zjazd 4 | Klasyfikacja](#zjazd-4--klasyfikacja)
 - [Zjazd 5 | Sieć neuronowa](#zjazd-5--sieć-neuronowa)
 - [Zjazd 6 | ComputerVision](#zjazd-6--computervision)
+- [Zjazd 7 | Gymnasium](#zjazd-7--gymnasium)
 
 ---
 
@@ -719,7 +720,6 @@ Szukamy odpowiedzi na pytanie czy osoba jest pełnoletnia lub niepełnoletnia.
 
 ## Opis zadania
 Program wykorzystuje biblioteki MediaPipe i OpenCV do detekcji twarzy i rąk w czasie rzeczywistym na podstawie obrazu z kamery.
-
 Implementacja obejmuje rozpoznawanie ruchu oraz analizę pozycji rąk względem twarzy. W zależności od wykrytych ruchów i gestów, program generuje następujące reakcje:
     - Rysowanie celownika na twarzy: Celownik jest rysowany, gdy ręce są opuszczone, a wykryty zostaje ruch.
     - Wyświetlanie komunikatu "Poddanie się!": Wyświetla się, gdy wykryte zostaną podniesione ręce (nad linią twarzy).
@@ -747,3 +747,29 @@ Program kończy swoje działanie po naciśnięciu klawisza ESC, a jego funkcjona
 
 ### Demo
 [![Celowanie w zielone demo | OpenCV](https://img.youtube.com/vi/u2p2zcWjAbc/maxresdefault.jpg)](https://www.youtube.com/watch?v=u2p2zcWjAbc)
+
+---
+
+# Zjazd 7 | Gymnasium
+
+**Folder:** `Zjazd7_RL_Gymnasium`
+- [Zadanie Frogger](#zadanie-frogger)
+
+## Zadanie Frogger
+
+**Plik:** `Zjazd7_RL_Gymnasium/Frogger.py`
+
+## Opis zadania
+Program implementuje trening agenta DQN (Deep Q-Network) w środowisku Frogger. 
+Agent jest uczony za pomocą biblioteki Stable Baselines3, a jego wydajność jest wizualizowana
+w postaci wideo, które rejestruje działanie agenta w grze. Program obejmuje przygotowanie środowiska,
+konfigurację modelu, proces treningowy, oraz testowanie modelu na środowisku renderowanym.
+
+## Wymagane biblioteki
+1. gymnasium
+2. ale_py
+3. stable_baselines3
+4. time
+
+## Nagranie animacji
+![Video of Frogger](Zjazd7_RL_Gymnasium/videos/rl-video-step-0-to-step-18000.mp4)
