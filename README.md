@@ -765,6 +765,9 @@ Agent jest uczony za pomocą biblioteki Stable Baselines3, a jego wydajność je
 w postaci wideo, które rejestruje działanie agenta w grze. Program obejmuje przygotowanie środowiska,
 konfigurację modelu, proces treningowy, oraz testowanie modelu na środowisku renderowanym.
 
+## Python version
+1. Python 3.10
+
 ## Wymagane biblioteki
 1. gymnasium
 2. ale_py
