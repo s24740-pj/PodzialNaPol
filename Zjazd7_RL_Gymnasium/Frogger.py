@@ -8,6 +8,9 @@ import time
         Kamil Powierza
         Dawid Feister
 
+    Wersja Pythona:
+        1. Python 3.10
+
     Wymagane biblioteki:
         1. gymnasium
         2. ale_py
